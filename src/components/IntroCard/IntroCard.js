@@ -77,7 +77,7 @@ export default function RecipeReviewCard() {
       </CardContent>
       <CardActions disableSpacing style={{background: '#161616'}}>
         <IconButton aria-label="instagram">
-          <Link variant='a' href="https://www.instagram.com/copy_starr/" target="_blank">
+          <Link variant='a' href="https://www.instagram.com/copy_starr" target="_blank">
             <InstagramIcon style={{color: '#EABA3F' }} />
           </Link>
         </IconButton>
