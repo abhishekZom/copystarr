@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import BackgroundImg from '../../images/copystarr_background.jpeg';
 import IntroCard from "../IntroCard";
 import Testimonials from '../Testimonials';
-import BackgroundImg from '../../images/copystarr_background.jpeg';
 
 
 const Hero = () => {
   return <HeroWrapper>
     <IntroCard></IntroCard>
-    {/* <Testimonials></Testimonials> */}
+    <Testimonials></Testimonials>
   </HeroWrapper>
 }
 
