@@ -1,23 +1,23 @@
-import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import styledWrapper from 'styled-components';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import Avatar from '@mui/material/Avatar';
 import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
-import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
 import Collapse from '@mui/material/Collapse';
-import Avatar from '@mui/material/Avatar';
-import IconButton, { IconButtonProps } from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
 import { red } from '@mui/material/colors';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
+import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import Link from '@mui/material/Link';
-import LogoImg from '../../images/copystarr_logo.png';
+import { styled } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
+import * as React from 'react';
+import styledWrapper from 'styled-components';
 import AvatarImg from '../../images/copystarr_avatar.jpg';
+import LogoImg from '../../images/copystarr_logo.png';
 
 
 interface ExpandMoreProps extends IconButtonProps {
@@ -87,7 +87,7 @@ export default function RecipeReviewCard() {
           </Link>
         </IconButton>
         <ExpandMore
-          expand={expanded}
+          expand={true}
           onClick={handleExpandClick}
           aria-expanded={expanded}
           aria-label="show more"
