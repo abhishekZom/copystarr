@@ -63,12 +63,6 @@ export default function RecipeReviewCard() {
           image={LogoImg}
           alt="Logo"
         />
-        {/* <CardMedia
-          component="img"
-          height="300"
-          image={AvatarImg}
-          alt="Avatar"
-        /> */}
       </CardMediaWrapper>
       <CardContent>
         <Typography sx={{ textAlign: 'center' }} variant="h3" color="text.primary">
