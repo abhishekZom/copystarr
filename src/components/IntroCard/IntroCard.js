@@ -80,16 +80,15 @@ export default function RecipeReviewCard() {
             <TwitterIcon style={{color: '#EABA3F' }}  />
           </Link>
         </IconButton>
-        <span style={{ color: 'white' }}>see more...</span>
         
-        <ExpandMore
+        {/* <ExpandMore
           expand={true}
           onClick={handleExpandClick}
           aria-expanded={expanded}
           aria-label="show more"
         >
           <ExpandMoreIcon style={{color: '#EABA3F' }}/>
-        </ExpandMore>
+        </ExpandMore> */}
       </CardActions>
       <Collapse in={true} timeout="auto" unmountOnExit>
       <CardContent>
