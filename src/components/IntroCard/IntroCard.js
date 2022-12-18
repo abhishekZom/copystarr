@@ -51,7 +51,7 @@ export default function RecipeReviewCard() {
           </Avatar>
         }
         title="Name: Aon Starr"
-        subheader="Email: [ aonstarr@copystarr.com ]"
+        subheader="(aonstarr@copystarr.com)"
         subheaderTypographyProps = {{color: '#EABA3F', fontSize: '20px' }}
         titleTypographyProps = {{ color: '#EABA3F', fontSize: '20px' }}
         style={{color: '#EABA3F', background: '#161616' }}
@@ -66,7 +66,7 @@ export default function RecipeReviewCard() {
       </CardMediaWrapper>
       <CardContent>
         <Typography sx={{ textAlign: 'center' }} variant="h3" color="text.primary">
-          --- Freelance Email Copywriter ---
+          Freelance Email Copywriter
         </Typography>
       </CardContent>
       <CardActions disableSpacing style={{background: '#161616'}}>
@@ -80,6 +80,8 @@ export default function RecipeReviewCard() {
             <TwitterIcon style={{color: '#EABA3F' }}  />
           </Link>
         </IconButton>
+        <span style={{ color: 'white' }}>see more...</span>
+        
         <ExpandMore
           expand={true}
           onClick={handleExpandClick}
@@ -89,16 +91,16 @@ export default function RecipeReviewCard() {
           <ExpandMoreIcon style={{color: '#EABA3F' }}/>
         </ExpandMore>
       </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
+      <Collapse in={true} timeout="auto" unmountOnExit>
       <CardContent>
         <Typography sx={{ textAlign: 'center' }} variant="h3" color="text.primary">
-          --- Sevices ---
+          <ServicesTitle>
+          Sevices
+          </ServicesTitle>
+          
         </Typography>
         <Typography sx={{ textAlign: 'center' }} variant="h4" color="text.primary">
-          Social Media Marketing
-        </Typography>
-        <Typography sx={{ textAlign: 'center' }} variant="h4" color="text.primary">
-          Email Marketing
+          Email Copy
         </Typography>
         <Typography sx={{ textAlign: 'center' }} variant="h4" color="text.primary">
           Sales Pages
@@ -108,6 +110,9 @@ export default function RecipeReviewCard() {
         </Typography>
         <Typography sx={{ textAlign: 'center' }} variant="h4" color="text.primary">
           Facebook Ads
+        </Typography>
+        <Typography sx={{ textAlign: 'center' }} variant="h4" color="text.primary">
+          Twitter Posts
         </Typography>
       </CardContent>
       </Collapse>
@@ -123,4 +128,11 @@ const CardMediaWrapper = styledWrapper.div`
   margin-bottom: 0.5rem;
   margin-left: 0.5rem;
   padding: 1rem;
+`;
+
+const ServicesTitle = styledWrapper.span`
+  display: inline-block;
+  width 100%;
+  color: #E9BA3F;
+  margin-bottom: 1rem;
 `;
