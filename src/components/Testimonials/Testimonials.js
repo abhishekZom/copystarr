@@ -57,7 +57,7 @@ export default function Testimonials() {
       <CardContent>
         <Typography sx={{ textAlign: 'center' }} variant="h5" color="text.primary">
           I help businesses 5-10x their sales by providing high precision conversion copy.
-          I have worked with various clients over a unique compination of niches that all complement each other.
+          I have worked with various clients over a unique combination of niches that all complement each other.
 
         </Typography>
       </CardContent>
@@ -70,6 +70,7 @@ export default function Testimonials() {
         >
            <Typography sx={{ color: '#EABA3F' }} variant="span" color="text.primary">
           </Typography>
+          <span style={{ color: '#e9ba3f'}}>see more</span>
           <ExpandMoreIcon style={{color: '#EABA3F' }}/>
         </ExpandMore>
       </CardActions>
@@ -88,13 +89,18 @@ export default function Testimonials() {
               </IconButton>
             }
             title="Name: K. S. Luthra"
-            subheader="Company: Tohima Filters"
+            subheader="(Tohima Filters)"
             subheaderTypographyProps = {{color: '#EEE', fontSize: '16px' }}
             titleTypographyProps = {{ color: '#EEE', fontSize: '16px' }}
             style={{color: '#EABA3F', background: '#161616' }}
           />
           <CardContent>
-            <Typography sx={{ textAlign: 'left', fontSize: '18px' }} variant="h5" color="text.primary">
+            <Typography sx={{ 
+              textAlign: 'left', 
+              fontSize: '18px', 
+              background: 'lightgrey',
+              padding: '1rem',
+              borderRadius: '0.5rem' }} variant="h5" color="text.primary">
               Aon reached out to me randomly and started giving me insights on my business that 
               I had never thought of during last 10 years of my operations.
               My sales were boosted by 1.8x in the 2nd month itself. Great experience. Time for new milestones
@@ -115,13 +121,18 @@ export default function Testimonials() {
               </IconButton>
             }
             title="Name: V. Singh"
-            subheader="Company: Black Rose"
+            subheader="(Black Rose)"
             subheaderTypographyProps = {{color: '#EEE', fontSize: '16px' }}
             titleTypographyProps = {{ color: '#EEE', fontSize: '16px' }}
             style={{color: '#EABA3F', background: '#161616' }}
           />
           <CardContent>
-            <Typography sx={{ textAlign: 'left', fontSize: '18px' }} variant="h5" color="text.primary">
+            <Typography sx={{ 
+              textAlign: 'left', 
+              fontSize: '18px', 
+              background: 'lightgrey',
+              padding: '1rem',
+              borderRadius: '0.5rem' }} variant="h5" color="text.primary">
               Very fast results! I am impressed. The best thing I like about you is that you don't
               just get things done but also teach and discuss how and why a certain approach was taken.
             </Typography>
