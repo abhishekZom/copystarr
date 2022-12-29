@@ -66,7 +66,7 @@ export default function RecipeReviewCard() {
       </CardMediaWrapper>
       <CardContent>
         <Typography sx={{ textAlign: 'center' }} variant="h3" color="text.primary">
-          Freelance Email Copywriter
+          Freelance Copywriter
         </Typography>
       </CardContent>
       <CardActions disableSpacing style={{background: '#161616'}}>

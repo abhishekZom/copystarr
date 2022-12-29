@@ -62,15 +62,18 @@ export default function Testimonials() {
         </Typography>
       </CardContent>
       <CardActions disableSpacing style={{background: '#161616'}}>
+        <span style={{ 
+          color: '#e9ba3f',
+          width: '100%',
+          textAlign:'right'
+          }}>see more</span>
         <ExpandMore
           expand={expanded}
           onClick={handleExpandClick}
           aria-expanded={expanded}
           aria-label="more"
         >
-           <Typography sx={{ color: '#EABA3F' }} variant="span" color="text.primary">
-          </Typography>
-          <span style={{ color: '#e9ba3f'}}>see more</span>
+          <Typography sx={{ color: '#EABA3F' }} variant="span" color="text.primary"></Typography>
           <ExpandMoreIcon style={{color: '#EABA3F' }}/>
         </ExpandMore>
       </CardActions>
