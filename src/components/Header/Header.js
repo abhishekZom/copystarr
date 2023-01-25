@@ -8,6 +8,7 @@ const Header = () => {
 export default Header;
 
 const HeaderWrapper = styled.div`
+  z-index: 99999;
   height: 10vh;
   background: black;
   color: #EABA3F;
