@@ -10,5 +10,5 @@ const Home = (props) => {
 export default Home;
 
 const HomeWrapper = styled.div`
-  
+  margin-top: 10vh;
 `;

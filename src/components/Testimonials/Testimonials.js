@@ -9,7 +9,7 @@ import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import Collapse from '@mui/material/Collapse';
-import { red } from '@mui/material/colors';
+import { grey, red, yellow } from '@mui/material/colors';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import Link from '@mui/material/Link';
 import { styled } from '@mui/material/styles';
@@ -43,7 +43,7 @@ export default function Testimonials() {
   };
 
   return (
-    <Card sx={{ maxWidth: 900 , margin: '6rem auto' }}>
+    <Card sx={{ maxWidth: 1200 , margin: '6rem auto' }}>
       <CardHeader
         action={
           <IconButton aria-label="settings">
@@ -51,15 +51,20 @@ export default function Testimonials() {
           </IconButton>
         }
         title="Testimonials"
-        titleTypographyProps = {{ color: '#EABA3F', fontSize: '20px' }}
+        titleTypographyProps = {{
+          color: '#EABA3F',
+          fontSize: '23px',
+          textAlign: 'center',
+          lineHeight: '30px',
+          fontFamily: 'Inknut Antiqua' }}
         style={{color: '#EABA3F', background: '#161616' }}
       />
-      <CardContent>
-        <Typography sx={{ textAlign: 'center' }} variant="h5" color="text.primary">
+      <CardContent sx={{ textAlign: 'center', background: '#fbf1d9' }}>
+        <span variant="h5" color="text.primary">
           I help businesses 5-10x their sales by providing high precision conversion copy.
           I have worked with various clients over a unique combination of niches that all complement each other.
 
-        </Typography>
+        </span>
       </CardContent>
       <CardActions disableSpacing style={{background: '#161616'}}>
         <span style={{ 
@@ -78,11 +83,11 @@ export default function Testimonials() {
         </ExpandMore>
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
-      <CardContent>
+      <CardContent sx={{ bgcolor: grey[400], padding: '1rem' }}>
         <TestimonialCard>
           <CardHeader
             avatar={
-              <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+              <Avatar sx={{ bgcolor: yellow[900] }} aria-label="recipe">
                 KL
               </Avatar>
             }
@@ -93,51 +98,29 @@ export default function Testimonials() {
             }
             title="Name: K. S. Luthra"
             subheader="(Tohima Filters)"
-            subheaderTypographyProps = {{color: '#EEE', fontSize: '16px' }}
-            titleTypographyProps = {{ color: '#EEE', fontSize: '16px' }}
+            subheaderTypographyProps = {{
+              color: '#EEE',
+              fontSize: '16px',
+              fontFamily: 'Inknut Antiqua'
+            }}
+            titleTypographyProps = {{
+              color: '#EEE',
+              fontSize: '16px',
+              fontFamily: 'Inknut Antiqua'
+            }}
             style={{color: '#EABA3F', background: '#161616' }}
           />
-          <CardContent>
+          <CardContent sx={{ bgcolor: grey[700], padding: '1rem' }}>
             <Typography sx={{ 
               textAlign: 'left', 
-              fontSize: '18px', 
+              fontSize: '16px', 
               background: 'lightgrey',
-              padding: '1rem',
+              fontFamily: 'Inknut Antiqua',
+              padding: '0.5rem',
               borderRadius: '0.5rem' }} variant="h5" color="text.primary">
               Aon reached out to me randomly and started giving me insights on my business that 
               I had never thought of during last 10 years of my operations.
               My sales were boosted by 1.8x in the 2nd month itself. Great experience. Time for new milestones
-            </Typography>
-          </CardContent>
-        </TestimonialCard>
-
-        <TestimonialCard>
-          <CardHeader
-            avatar={
-              <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                VS
-              </Avatar>
-            }
-            action={
-              <IconButton aria-label="settings">
-                <MoreVertIcon />
-              </IconButton>
-            }
-            title="Name: V. Singh"
-            subheader="(Black Rose)"
-            subheaderTypographyProps = {{color: '#EEE', fontSize: '16px' }}
-            titleTypographyProps = {{ color: '#EEE', fontSize: '16px' }}
-            style={{color: '#EABA3F', background: '#161616' }}
-          />
-          <CardContent>
-            <Typography sx={{ 
-              textAlign: 'left', 
-              fontSize: '18px', 
-              background: 'lightgrey',
-              padding: '1rem',
-              borderRadius: '0.5rem' }} variant="h5" color="text.primary">
-              Very fast results! I am impressed. The best thing I like about you is that you don't
-              just get things done but also teach and discuss how and why a certain approach was taken.
             </Typography>
           </CardContent>
         </TestimonialCard>
@@ -158,5 +141,5 @@ const CardMediaWrapper = styledWrapper.div`
 `;
 
 const TestimonialCard = styled(Card)`
-  margin: 2rem;
+  margin: 0rem;
 `;
