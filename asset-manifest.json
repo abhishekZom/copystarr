@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.d03053b2.css",
-    "main.js": "/static/js/main.2ad4c6e3.js",
-    "static/js/787.2ecfa296.chunk.js": "/static/js/787.2ecfa296.chunk.js",
-    "static/media/copystarr_logo.png": "/static/media/copystarr_logo.2dd4744aa8b91c151f37.png",
-    "static/media/copystarr_avatar.jpg": "/static/media/copystarr_avatar.314833430234e1315fc3.jpg",
-    "index.html": "/index.html",
-    "main.d03053b2.css.map": "/static/css/main.d03053b2.css.map",
-    "main.2ad4c6e3.js.map": "/static/js/main.2ad4c6e3.js.map",
-    "787.2ecfa296.chunk.js.map": "/static/js/787.2ecfa296.chunk.js.map"
+    "main.css": "/copystarr/static/css/main.d03053b2.css",
+    "main.js": "/copystarr/static/js/main.e0a57148.js",
+    "static/js/787.2ecfa296.chunk.js": "/copystarr/static/js/787.2ecfa296.chunk.js",
+    "static/media/copystarr_logo.png": "/copystarr/static/media/copystarr_logo.2dd4744aa8b91c151f37.png",
+    "static/media/copystarr_avatar.jpg": "/copystarr/static/media/copystarr_avatar.314833430234e1315fc3.jpg",
+    "index.html": "/copystarr/index.html",
+    "main.d03053b2.css.map": "/copystarr/static/css/main.d03053b2.css.map",
+    "main.e0a57148.js.map": "/copystarr/static/js/main.e0a57148.js.map",
+    "787.2ecfa296.chunk.js.map": "/copystarr/static/js/787.2ecfa296.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d03053b2.css",
-    "static/js/main.2ad4c6e3.js"
+    "static/js/main.e0a57148.js"
   ]
 }
