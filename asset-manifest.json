@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.1655dc2a.css",
-    "main.js": "/static/js/main.02e60a38.js",
+    "main.js": "/static/js/main.a882dbc7.js",
     "static/js/787.2ecfa296.chunk.js": "/static/js/787.2ecfa296.chunk.js",
     "static/media/sentient2.png": "/static/media/sentient2.780eb3c90ed68b201c6d.png",
     "static/media/copystarr_logo.png": "/static/media/copystarr_logo.2dd4744aa8b91c151f37.png",
@@ -9,6 +9,7 @@
     "static/media/pro1.png": "/static/media/pro1.efd8fc65ee16c9b52f8e.png",
     "static/media/pro2.png": "/static/media/pro2.a40162eb25eba1780d8a.png",
     "static/media/sentient3.png": "/static/media/sentient3.d3bf0b1b60509d01751d.png",
+    "static/media/meta.png": "/static/media/meta.38ac5a4a1977659cb374.png",
     "static/media/copystarr_avatar.jpg": "/static/media/copystarr_avatar.314833430234e1315fc3.jpg",
     "static/media/starr.jpg": "/static/media/starr.b958a468aebd5d4e49d6.jpg",
     "static/media/sentient4.jpg": "/static/media/sentient4.f28dda2e76385aa195e8.jpg",
@@ -16,11 +17,11 @@
     "static/media/work1.jpg": "/static/media/work1.b844755d91c9d78ba4d7.jpg",
     "index.html": "/index.html",
     "main.1655dc2a.css.map": "/static/css/main.1655dc2a.css.map",
-    "main.02e60a38.js.map": "/static/js/main.02e60a38.js.map",
+    "main.a882dbc7.js.map": "/static/js/main.a882dbc7.js.map",
     "787.2ecfa296.chunk.js.map": "/static/js/787.2ecfa296.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1655dc2a.css",
-    "static/js/main.02e60a38.js"
+    "static/js/main.a882dbc7.js"
   ]
 }
