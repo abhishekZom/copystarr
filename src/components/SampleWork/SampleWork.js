@@ -10,6 +10,7 @@ import styledWrapper from 'styled-components';
 
 
 import Kitty1Img from '../../images/kitty.jpg';
+import Meta from '../../images/meta.png';
 import Pro1Img from '../../images/pro1.png';
 import Pro2Img from '../../images/pro2.png';
 import Sentient1Img from '../../images/sentient1.png';
@@ -18,6 +19,7 @@ import Sentient3Img from '../../images/sentient3.png';
 import Sentient4Img from '../../images/sentient4.jpg';
 import StarrImg from '../../images/starr.jpg';
 import Work1Img from '../../images/work1.jpg';
+
 
 import { Autoplay, EffectCards, EffectCreative, Navigation, Pagination } from "swiper";
 import 'swiper/css';
@@ -85,6 +87,34 @@ export default function SampleWork() {
                   <CardMedia
                     component="img"
                     height="auto"
+                    image={Meta}
+                    alt="Logo"
+                  />
+                </CardMediaWrapper>
+              </SampleImageContainer>
+            </ServicesSlideContainer>
+          </SwiperSlide>
+          <SwiperSlide>
+            <ServicesSlideContainer>
+              <SampleImageContainer>
+                <CardMediaWrapper>
+                  <CardMedia
+                    component="img"
+                    height="auto"
+                    image={Pro1Img}
+                    alt="Logo"
+                  />
+                </CardMediaWrapper>
+              </SampleImageContainer>
+            </ServicesSlideContainer>
+          </SwiperSlide>
+          <SwiperSlide>
+            <ServicesSlideContainer>
+              <SampleImageContainer>
+                <CardMediaWrapper>
+                  <CardMedia
+                    component="img"
+                    height="auto"
                     image={Sentient2Img}
                     alt="Logo"
                   />
@@ -128,20 +158,6 @@ export default function SampleWork() {
                     component="img"
                     height="auto"
                     image={Sentient3Img}
-                    alt="Logo"
-                  />
-                </CardMediaWrapper>
-              </SampleImageContainer>
-            </ServicesSlideContainer>
-          </SwiperSlide>
-          <SwiperSlide>
-            <ServicesSlideContainer>
-              <SampleImageContainer>
-                <CardMediaWrapper>
-                  <CardMedia
-                    component="img"
-                    height="auto"
-                    image={Pro1Img}
                     alt="Logo"
                   />
                 </CardMediaWrapper>
