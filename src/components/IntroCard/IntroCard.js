@@ -66,7 +66,7 @@ export default function RecipeReviewCard() {
           lineHeight: '30px',
           fontFamily: 'Inknut Antiqua',
           marginBottom: '0.5rem' }}
-        style={{color: '#EABA3F', background: '#161616' }}
+        style={{color: '#EABA3F', background: '#3b5b78' }}
       />
       <CardMediaWrapper>
         <CardMedia

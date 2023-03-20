@@ -65,7 +65,7 @@ export default function SampleWork() {
           textAlign: 'center',
           lineHeight: '30px',
           fontFamily: 'Inknut Antiqua' }}
-        style={{color: '#EABA3F', background: '#161616' }}
+        style={{color: '#EABA3F', background: '#3b5b78' }}
       />
       <CardContent sx={{ textAlign: 'center', background: '#fbf1d9' }}>
       <Swiper
@@ -222,66 +222,6 @@ export default function SampleWork() {
           </SwiperSlide>
         </Swiper>
       </CardContent>
-      {/* <CardActions disableSpacing style={{background: '#161616'}}>
-        <span style={{ 
-          color: '#e9ba3f',
-          width: '100%',
-          textAlign:'right'
-          }}>see more</span>
-        <ExpandMore
-          expand={expanded}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="more"
-        >
-          <Typography sx={{ color: '#EABA3F' }} variant="span" color="text.primary"></Typography>
-          <ExpandMoreIcon style={{color: '#EABA3F' }}/>
-        </ExpandMore>
-      </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-      <CardContent sx={{ bgcolor: grey[400], padding: '1rem' }}>
-        <TestimonialCard>
-          <CardHeader
-            avatar={
-              <Avatar sx={{ bgcolor: yellow[900] }} aria-label="recipe">
-                KL
-              </Avatar>
-            }
-            action={
-              <IconButton aria-label="settings">
-                <MoreVertIcon />
-              </IconButton>
-            }
-            title="Name: K. S. Luthra"
-            subheader="(Tohima Filters)"
-            subheaderTypographyProps = {{
-              color: '#EEE',
-              fontSize: '16px',
-              fontFamily: 'Inknut Antiqua'
-            }}
-            titleTypographyProps = {{
-              color: '#EEE',
-              fontSize: '16px',
-              fontFamily: 'Inknut Antiqua'
-            }}
-            style={{color: '#EABA3F', background: '#161616' }}
-          />
-          <CardContent sx={{ bgcolor: grey[700], padding: '1rem' }}>
-            <Typography sx={{ 
-              textAlign: 'center', 
-              fontSize: '18px', 
-              background: 'lightgrey',
-              fontFamily: 'Inknut Antiqua',
-              padding: '0.5rem',
-              borderRadius: '0.5rem' }} variant="h5" color="text.primary">
-              Aon reached out to me randomly and started giving me insights on my business that 
-              I had never thought of during last 10 years of my operations.
-              My sales were boosted by 1.8x in the 2nd month itself. Great experience. Time for new milestones
-            </Typography>
-          </CardContent>
-        </TestimonialCard>
-      </CardContent>
-      </Collapse> */}
     </Card>
   );
 }

@@ -10,7 +10,7 @@ export default Header;
 const HeaderWrapper = styled.div`
   z-index: 99999;
   height: 10vh;
-  background: black;
+  background: #3b5b78;
   color: #EABA3F;
   position: fixed;
   top: 0;
