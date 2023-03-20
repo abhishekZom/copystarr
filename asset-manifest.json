@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.1655dc2a.css",
-    "main.js": "/static/js/main.a882dbc7.js",
+    "main.js": "/static/js/main.5964800e.js",
     "static/js/787.2ecfa296.chunk.js": "/static/js/787.2ecfa296.chunk.js",
     "static/media/sentient2.png": "/static/media/sentient2.780eb3c90ed68b201c6d.png",
     "static/media/copystarr_logo.png": "/static/media/copystarr_logo.2dd4744aa8b91c151f37.png",
@@ -17,11 +17,11 @@
     "static/media/work1.jpg": "/static/media/work1.b844755d91c9d78ba4d7.jpg",
     "index.html": "/index.html",
     "main.1655dc2a.css.map": "/static/css/main.1655dc2a.css.map",
-    "main.a882dbc7.js.map": "/static/js/main.a882dbc7.js.map",
+    "main.5964800e.js.map": "/static/js/main.5964800e.js.map",
     "787.2ecfa296.chunk.js.map": "/static/js/787.2ecfa296.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1655dc2a.css",
-    "static/js/main.a882dbc7.js"
+    "static/js/main.5964800e.js"
   ]
 }
