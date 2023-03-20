@@ -23,5 +23,5 @@ function App() {
 export default App;
 
 const AppWrapper = styled.div`
-  background: #333333;
+  background: #3b5b78;
 `;
