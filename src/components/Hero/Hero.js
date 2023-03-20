@@ -5,7 +5,6 @@ import IntroCard from "../IntroCard";
 import SampleWork from "../SampleWork";
 import Testimonials from '../Testimonials';
 
-
 const Hero = () => {
   return <HeroWrapper>
     <IntroCard></IntroCard>

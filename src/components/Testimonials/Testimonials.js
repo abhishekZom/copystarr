@@ -52,23 +52,23 @@ export default function Testimonials() {
         }
         title="Testimonials"
         titleTypographyProps = {{
-          color: '#EABA3F',
+          color: 'white',
           fontSize: '23px',
           textAlign: 'center',
           lineHeight: '30px',
           fontFamily: 'Inknut Antiqua' }}
-        style={{color: '#EABA3F', background: '#161616' }}
+        style={{color: 'white', background: '#141F29' }}
       />
-      <CardContent sx={{ textAlign: 'center', background: '#fbf1d9' }}>
+      <CardContent sx={{ textAlign: 'center', color: 'white', background: '#3b5b78', border: '1px solid 141F29' }}>
         <span variant="h5" color="text.primary">
           I help businesses 5-10x their sales by providing high precision conversion copy.
           I have worked with various clients over a unique combination of niches that all complement each other.
 
         </span>
       </CardContent>
-      <CardActions disableSpacing style={{background: '#161616'}}>
+      <CardActions disableSpacing style={{background: '#141F29'}}>
         <span style={{ 
-          color: '#e9ba3f',
+          color: 'white',
           width: '100%',
           textAlign:'right'
           }}>see more</span>
@@ -78,16 +78,16 @@ export default function Testimonials() {
           aria-expanded={expanded}
           aria-label="more"
         >
-          <Typography sx={{ color: '#EABA3F' }} variant="span" color="text.primary"></Typography>
-          <ExpandMoreIcon style={{color: '#EABA3F' }}/>
+          <Typography sx={{ color: 'white' }} variant="span" color="text.primary"></Typography>
+          <ExpandMoreIcon style={{color: 'white' }}/>
         </ExpandMore>
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
-      <CardContent sx={{ bgcolor: grey[400], padding: '1rem' }}>
+      <CardContent sx={{ bgcolor: '#3b5b78', padding: '1rem' }}>
         <TestimonialCard>
           <CardHeader
             avatar={
-              <Avatar sx={{ bgcolor: yellow[900] }} aria-label="recipe">
+              <Avatar sx={{ bgcolor: '#3b5b78' }} aria-label="recipe">
                 KL
               </Avatar>
             }
@@ -108,15 +108,16 @@ export default function Testimonials() {
               fontSize: '16px',
               fontFamily: 'Inknut Antiqua'
             }}
-            style={{color: '#EABA3F', background: '#161616' }}
+            style={{color: '#EABA3F', background: '#141F29' }}
           />
-          <CardContent sx={{ bgcolor: grey[700], padding: '1rem' }}>
+          <CardContent sx={{ bgcolor: '#2a4156', padding: '1rem' }}>
             <Typography sx={{ 
               textAlign: 'left', 
               fontSize: '16px', 
-              background: 'lightgrey',
+              background: '#3b5b78',
               fontFamily: 'Inknut Antiqua',
               padding: '0.5rem',
+              color: 'white',
               borderRadius: '0.5rem' }} variant="h5" color="text.primary">
               Aon reached out to me randomly and started giving me insights on my business that 
               I had never thought of during last 10 years of my operations.
