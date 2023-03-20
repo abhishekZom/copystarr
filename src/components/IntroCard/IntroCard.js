@@ -54,13 +54,13 @@ export default function RecipeReviewCard() {
         title="Direct Response Copywriter"
         subheader='Reach me at "aonstarr@copystarr.com"'
         subheaderTypographyProps = {{
-          color: '#EABA3F',
+          color: '#eeeeee',
           fontSize: '18px',
           textAlign: 'center',
           lineHeight: '15px',
           fontFamily: 'Inknut Antiqua' }}
         titleTypographyProps = {{
-          color: '#EABA3F',
+          color: '#eeeeee',
           fontSize: '17px',
           textAlign: 'center',
           lineHeight: '30px',
@@ -111,7 +111,7 @@ export default function RecipeReviewCard() {
           <ServicesTitle style={{
             textAlign: 'center',
             textDecoration: 'underline',
-            color: grey[900],
+            color: 'white',
             fontFamily: 'Inknut Antiqua'
           }}>
             Sevices
