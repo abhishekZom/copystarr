@@ -60,14 +60,14 @@ export default function SampleWork() {
         }
         title="Sample Work"
         titleTypographyProps = {{
-          color: '#EABA3F',
+          color: 'white',
           fontSize: '23px',
           textAlign: 'center',
           lineHeight: '30px',
           fontFamily: 'Inknut Antiqua' }}
-        style={{color: '#EABA3F', background: '#3b5b78' }}
+        style={{color: '#3b5b78', background: '#141F29' }}
       />
-      <CardContent sx={{ textAlign: 'center', background: '#fbf1d9' }}>
+      <CardContent sx={{ textAlign: 'center', background: '#3b5b78' }}>
       <Swiper
           centeredSlides={true}
           effect={"cards"}

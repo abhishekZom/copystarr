@@ -87,12 +87,12 @@ export default function RecipeReviewCard() {
         </span> */}
         <IconButton aria-label="instagram">
           <Link variant='a' href="https://www.instagram.com/copy_starr" target="_blank">
-            <InstagramIcon style={{color: '#EABA3F' }} />
+            <InstagramIcon style={{color: 'white' }} />
           </Link>
         </IconButton>
         <IconButton aria-label="twitter">
           <Link variant='a' href="https://twitter.com/copystarr" target="_blank">
-            <TwitterIcon style={{color: '#EABA3F' }}  />
+            <TwitterIcon style={{color: 'white' }}  />
           </Link>
         </IconButton>
         
@@ -106,7 +106,7 @@ export default function RecipeReviewCard() {
         </ExpandMore> */}
       </CardActions>
       <Collapse in={true} timeout="auto" unmountOnExit>
-      <CardContent sx={{ textAlign: 'center', bgcolor: grey[400] }}>
+      <CardContent sx={{ textAlign: 'center', bgcolor: '#141F29' }}>
         <Typography variant="h3" color="text.primary">
           <ServicesTitle style={{
             textAlign: 'center',
@@ -138,21 +138,21 @@ export default function RecipeReviewCard() {
           modules={[Autoplay, EffectCreative]}
           className="mySwiper"
         >
-          <SwiperSlide>
+          <SwiperSlide style={{ color: 'white', bgcolor: '#3b5b78'}}>
             <ServicesSlideContainer
-              style={{ lineHeight: '30px'}}>
+              style={{ lineHeight: '30px', color: 'white', bgcolor: '#3b5b78'}}>
               Email Copywriting
             </ServicesSlideContainer>
           </SwiperSlide>
           <SwiperSlide>
             <ServicesSlideContainer
-              style={{ lineHeight: '30px'}}>
+              style={{ lineHeight: '30px', color: 'white', bgcolor: '#3b5b78'}}>
               Facebook Ads
             </ServicesSlideContainer>
           </SwiperSlide>
           <SwiperSlide>
             <ServicesSlideContainer
-              style={{ lineHeight: '30px'}}>
+              style={{ lineHeight: '30px', color: 'white', bgcolor: '#3b5b78'}}>
               Twitter Smartposts
             </ServicesSlideContainer>
           </SwiperSlide>
@@ -181,7 +181,7 @@ const CardMediaWrapper = styledWrapper.div`
 const ServicesTitle = styledWrapper.span`
   display: inline-block;
   width 100%;
-  color: #E9BA3F;
+  color: white;
   margin-bottom: 1rem;
 `;
 
@@ -192,7 +192,7 @@ const ServicesSlideContainer = styledWrapper.div`
   margin: auto;
   width: 60%;
   height: 5rem;
-  background: grey;
+  background: #3b5b78;
   font-size: 2rem;
   font-weight: 600;
   padding: 2rem;

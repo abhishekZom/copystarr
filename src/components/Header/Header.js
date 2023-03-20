@@ -10,12 +10,12 @@ export default Header;
 const HeaderWrapper = styled.div`
   z-index: 99999;
   height: 10vh;
-  background: #3b5b78;
+  background: #141F29;
   color: white;
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
+  /* opacity: 0.9; */
   font-size: 2.2rem;
   display: flex;
   align-items: center;
