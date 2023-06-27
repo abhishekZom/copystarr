@@ -89,7 +89,7 @@ export default function SampleWork() {
                   <CardMedia
                     component="img"
                     height="auto"
-                    image={tohima1}
+                    image={tohima1Img}
                     alt="Logo"
                   />
                 </CardMediaWrapper>
@@ -103,7 +103,7 @@ export default function SampleWork() {
                   <CardMedia
                     component="img"
                     height="auto"
-                    image={tohima2}
+                    image={tohima2Img}
                     alt="Logo"
                   />
                 </CardMediaWrapper>
@@ -140,48 +140,7 @@ export default function SampleWork() {
           </SwiperSlide>
 
 
-          <SwiperSlide>
-            <ServicesSlideContainer>
-              <SampleImageContainer>
-                <CardMediaWrapper>
-                  <CardMedia
-                    component="img"
-                    height="auto"
-                    image={Sentient4Img}
-                    alt="Logo"
-                  />
-                </CardMediaWrapper>
-              </SampleImageContainer>
-            </ServicesSlideContainer>
-          </SwiperSlide>
-          <SwiperSlide>
-            <ServicesSlideContainer>
-              <SampleImageContainer>
-                <CardMediaWrapper>
-                  <CardMedia
-                    component="img"
-                    height="auto"
-                    image={Sentient4Img}
-                    alt="Logo"
-                  />
-                </CardMediaWrapper>
-              </SampleImageContainer>
-            </ServicesSlideContainer>
-          </SwiperSlide>
-          <SwiperSlide>
-            <ServicesSlideContainer>
-              <SampleImageContainer>
-                <CardMediaWrapper>
-                  <CardMedia
-                    component="img"
-                    height="auto"
-                    image={Sentient4Img}
-                    alt="Logo"
-                  />
-                </CardMediaWrapper>
-              </SampleImageContainer>
-            </ServicesSlideContainer>
-          </SwiperSlide>
+
 
           <SwiperSlide>
             <ServicesSlideContainer>
