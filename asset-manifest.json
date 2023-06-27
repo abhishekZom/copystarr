@@ -1,27 +1,31 @@
 {
   "files": {
     "main.css": "/static/css/main.1655dc2a.css",
-    "main.js": "/static/js/main.d5bedf36.js",
+    "main.js": "/static/js/main.d3b9bbed.js",
     "static/js/787.2ecfa296.chunk.js": "/static/js/787.2ecfa296.chunk.js",
     "static/media/sentient2.png": "/static/media/sentient2.780eb3c90ed68b201c6d.png",
+    "static/media/tohima1.png": "/static/media/tohima1.f9070dc60493f98b03b7.png",
     "static/media/sentient1.png": "/static/media/sentient1.f1ab749c2eb614b619e7.png",
     "static/media/pro1.png": "/static/media/pro1.efd8fc65ee16c9b52f8e.png",
     "static/media/pro2.png": "/static/media/pro2.a40162eb25eba1780d8a.png",
     "static/media/copystarr_logo.png": "/static/media/copystarr_logo.e95f0f2c077239aa32ad.png",
     "static/media/sentient3.png": "/static/media/sentient3.d3bf0b1b60509d01751d.png",
+    "static/media/pro.png": "/static/media/pro.b37fb4d159f9ef66243e.png",
     "static/media/meta.png": "/static/media/meta.38ac5a4a1977659cb374.png",
+    "static/media/tohima2.png": "/static/media/tohima2.f2a7419fda326bbdbdb4.png",
     "static/media/copystarr_avatar.jpg": "/static/media/copystarr_avatar.314833430234e1315fc3.jpg",
     "static/media/starr.jpg": "/static/media/starr.b958a468aebd5d4e49d6.jpg",
     "static/media/sentient4.jpg": "/static/media/sentient4.f28dda2e76385aa195e8.jpg",
+    "static/media/eggciting.png": "/static/media/eggciting.e74acd02b9826b6c7f84.png",
     "static/media/kitty.jpg": "/static/media/kitty.4fd8ffe19522f24360a2.jpg",
     "static/media/work1.jpg": "/static/media/work1.b844755d91c9d78ba4d7.jpg",
     "index.html": "/index.html",
     "main.1655dc2a.css.map": "/static/css/main.1655dc2a.css.map",
-    "main.d5bedf36.js.map": "/static/js/main.d5bedf36.js.map",
+    "main.d3b9bbed.js.map": "/static/js/main.d3b9bbed.js.map",
     "787.2ecfa296.chunk.js.map": "/static/js/787.2ecfa296.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1655dc2a.css",
-    "static/js/main.d5bedf36.js"
+    "static/js/main.d3b9bbed.js"
   ]
 }
