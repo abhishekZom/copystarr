@@ -8,9 +8,10 @@ import { styled } from '@mui/material/styles';
 import * as React from 'react';
 import styledWrapper from 'styled-components';
 
-
+import eggcitingImg from '../../images/eggciting.png';
 import Kitty1Img from '../../images/kitty.jpg';
 import Meta from '../../images/meta.png';
+import proImg from '../../images/pro.png';
 import Pro1Img from '../../images/pro1.png';
 import Pro2Img from '../../images/pro2.png';
 import Sentient1Img from '../../images/sentient1.png';
@@ -18,8 +19,9 @@ import Sentient2Img from '../../images/sentient2.png';
 import Sentient3Img from '../../images/sentient3.png';
 import Sentient4Img from '../../images/sentient4.jpg';
 import StarrImg from '../../images/starr.jpg';
+import tohima1Img from '../../images/tohima1.png';
+import tohima2Img from '../../images/tohima2.png';
 import Work1Img from '../../images/work1.jpg';
-
 
 import { Autoplay, EffectCards, EffectCreative, Navigation, Pagination } from "swiper";
 import 'swiper/css';
@@ -87,6 +89,107 @@ export default function SampleWork() {
                   <CardMedia
                     component="img"
                     height="auto"
+                    image={tohima1}
+                    alt="Logo"
+                  />
+                </CardMediaWrapper>
+              </SampleImageContainer>
+            </ServicesSlideContainer>
+          </SwiperSlide>
+          <SwiperSlide>
+            <ServicesSlideContainer>
+              <SampleImageContainer>
+                <CardMediaWrapper>
+                  <CardMedia
+                    component="img"
+                    height="auto"
+                    image={tohima2}
+                    alt="Logo"
+                  />
+                </CardMediaWrapper>
+              </SampleImageContainer>
+            </ServicesSlideContainer>
+          </SwiperSlide>
+          <SwiperSlide>
+            <ServicesSlideContainer>
+              <SampleImageContainer>
+                <CardMediaWrapper>
+                  <CardMedia
+                    component="img"
+                    height="auto"
+                    image={proImg}
+                    alt="Logo"
+                  />
+                </CardMediaWrapper>
+              </SampleImageContainer>
+            </ServicesSlideContainer>
+          </SwiperSlide>
+          <SwiperSlide>
+            <ServicesSlideContainer>
+              <SampleImageContainer>
+                <CardMediaWrapper>
+                  <CardMedia
+                    component="img"
+                    height="auto"
+                    image={eggcitingImg}
+                    alt="Logo"
+                  />
+                </CardMediaWrapper>
+              </SampleImageContainer>
+            </ServicesSlideContainer>
+          </SwiperSlide>
+
+
+          <SwiperSlide>
+            <ServicesSlideContainer>
+              <SampleImageContainer>
+                <CardMediaWrapper>
+                  <CardMedia
+                    component="img"
+                    height="auto"
+                    image={Sentient4Img}
+                    alt="Logo"
+                  />
+                </CardMediaWrapper>
+              </SampleImageContainer>
+            </ServicesSlideContainer>
+          </SwiperSlide>
+          <SwiperSlide>
+            <ServicesSlideContainer>
+              <SampleImageContainer>
+                <CardMediaWrapper>
+                  <CardMedia
+                    component="img"
+                    height="auto"
+                    image={Sentient4Img}
+                    alt="Logo"
+                  />
+                </CardMediaWrapper>
+              </SampleImageContainer>
+            </ServicesSlideContainer>
+          </SwiperSlide>
+          <SwiperSlide>
+            <ServicesSlideContainer>
+              <SampleImageContainer>
+                <CardMediaWrapper>
+                  <CardMedia
+                    component="img"
+                    height="auto"
+                    image={Sentient4Img}
+                    alt="Logo"
+                  />
+                </CardMediaWrapper>
+              </SampleImageContainer>
+            </ServicesSlideContainer>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <ServicesSlideContainer>
+              <SampleImageContainer>
+                <CardMediaWrapper>
+                  <CardMedia
+                    component="img"
+                    height="auto"
                     image={Meta}
                     alt="Logo"
                   />
@@ -130,20 +233,6 @@ export default function SampleWork() {
                     component="img"
                     height="auto"
                     image={Sentient1Img}
-                    alt="Logo"
-                  />
-                </CardMediaWrapper>
-              </SampleImageContainer>
-            </ServicesSlideContainer>
-          </SwiperSlide>
-          <SwiperSlide>
-            <ServicesSlideContainer>
-              <SampleImageContainer>
-                <CardMediaWrapper>
-                <CardMedia
-                    component="img"
-                    height="auto"
-                    image={Kitty1Img}
                     alt="Logo"
                   />
                 </CardMediaWrapper>
@@ -200,20 +289,6 @@ export default function SampleWork() {
                     component="img"
                     height="auto"
                     image={StarrImg}
-                    alt="Logo"
-                  />
-                </CardMediaWrapper>
-              </SampleImageContainer>
-            </ServicesSlideContainer>
-          </SwiperSlide>
-          <SwiperSlide>
-            <ServicesSlideContainer>
-              <SampleImageContainer>
-                <CardMediaWrapper>
-                  <CardMedia
-                    component="img"
-                    height="auto"
-                    image={Sentient4Img}
                     alt="Logo"
                   />
                 </CardMediaWrapper>
