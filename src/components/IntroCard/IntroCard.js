@@ -50,7 +50,7 @@ export default function RecipeReviewCard() {
   };
 
   return (
-    <CardWrapper sx={{ maxWidth: 1200 , margin: '1rem auto' }}>
+    <CardWrapper sx={{ maxWidth: 1200 , margin: '1rem auto', color: "white" }}>
       <ProfilePicWrapper>
         <CardMedia
             component="img"
@@ -62,11 +62,18 @@ export default function RecipeReviewCard() {
       </ProfilePicWrapper>
       <CardContent>
         <Typography sx={{ textAlign: 'center'}} variant="p" color="text.primary" >
-          <Typography variant="p" style={{margin: "0!important", padding: "0.3rem", display: "block"}}>Direct Response Copywriter</Typography>
+          <Typography variant="p" 
+            style={{
+            margin: "0!important", 
+            padding: "0.3rem", 
+            display: "block",
+            color: "#cccccc"
+            }}>Direct Response Copywriter</Typography>
           <Typography variant="p" style={{
               margin: "0!important",
               padding: "0.3rem",
-              display: "block"
+              display: "block",
+              color: "#cccccc"
             }}>
               Reach me via &nbsp;
             <Link
@@ -79,7 +86,8 @@ export default function RecipeReviewCard() {
                 padding: "0.3rem",
                 textDecoration: "none",
                 border: "2px solid lightblue",
-                borderRadius: "10px"
+                borderRadius: "10px",
+                color: "#cccccc"
               }}>
               Email
             </Link>
@@ -88,6 +96,7 @@ export default function RecipeReviewCard() {
               margin: "0!important",
               padding: "0.3rem",
               display: "block",
+              color: "#cccccc"
             }}>
               Book a call Now : &nbsp;
             <Link
@@ -105,7 +114,8 @@ export default function RecipeReviewCard() {
               Calendly
             </Link>
           </Typography>
-          <Typography variant="p"style={{margin: "0!important", padding: "0.3rem", display: "block"}}>
+          <Typography variant="p"style={{margin: "0!important", padding: "0.3rem", display: "block",
+            color: "#cccccc"}}>
             Socials : &nbsp;
             <Link
               variant='a'
@@ -138,7 +148,8 @@ export default function RecipeReviewCard() {
               Instagram
             </Link>
           </Typography>
-          <Typography variant="p"style={{margin: "0!important", padding: "2rem", display: "block"}}>
+          <Typography variant="p"style={{margin: "0!important", padding: "2rem", display: "block",
+            color: "#cccccc"}}>
             I believe in immediate execution without sacrificing the quality of work. You can now competely focus on your brand image since you are the product. I will smoothen out the marketing side of things with content that is produced to sell and breed loyalty.
           </Typography>
         </Typography>
