@@ -57,13 +57,16 @@ export default function Testimonials() {
           fontSize: '23px',
           textAlign: 'center',
           lineHeight: '30px',
-          fontFamily: 'Inknut Antiqua' }}
+          fontFamily: 'Verdana' }}
         style={{color: 'white', background: '#141F29' }}
       />
       <CardContent sx={{ textAlign: 'center', color: 'white', background: '#3b5b78', border: '1px solid 141F29' }}>
         <span variant="h5" color="text.primary">
-          I do not consider I have clients until they have made money.
+          I believe in immediate execution without sacrificing the quality of work.
 
+          You can now competely focus on your brand image since you are the product.
+
+          I will smoothen out the marketing side of things with content that is produced to sell and breed loyalty.
         </span>
       </CardContent>
       <CardActions disableSpacing style={{background: '#141F29'}}>
@@ -101,12 +104,12 @@ export default function Testimonials() {
             subheaderTypographyProps = {{
               color: '#EEE',
               fontSize: '16px',
-              fontFamily: 'Inknut Antiqua'
+              fontFamily: 'Verdana'
             }}
             titleTypographyProps = {{
               color: '#EEE',
               fontSize: '16px',
-              fontFamily: 'Inknut Antiqua'
+              fontFamily: 'Verdana'
             }}
             style={{color: '#EABA3F', background: '#141F29' }}
           />
@@ -115,7 +118,7 @@ export default function Testimonials() {
               textAlign: 'left', 
               fontSize: '16px', 
               background: '#3b5b78',
-              fontFamily: 'Inknut Antiqua',
+              fontFamily: 'Verdana',
               padding: '0.5rem',
               color: 'white',
               borderRadius: '0.5rem' }} variant="h5" color="text.primary">

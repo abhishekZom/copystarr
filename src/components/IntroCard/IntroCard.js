@@ -60,41 +60,90 @@ export default function RecipeReviewCard() {
             alt="Logo"
           />
       </ProfilePicWrapper>
-      <CardHeader sx={{ padding: '2rem'}}
-        title="Direct Response Copywriter"
-        subheader='Reach me at "aonstarr@copystarr.com"'
-        subheaderTypographyProps = {{
-          color: '#eeeeee',
-          fontSize: '18px',
-          textAlign: 'center',
-          lineHeight: '15px',
-          fontFamily: 'Inknut Antiqua' }}
-        titleTypographyProps = {{
-          color: '#eeeeee',
-          fontSize: '17px',
-          textAlign: 'center',
-          lineHeight: '30px',
-          fontFamily: 'Inknut Antiqua',
-          marginBottom: '0.5rem' }}
-        style={{color: '#EABA3F', background: '#3b5b78' }}
-      />
-      <CardMediaWrapper>
-        <CardMedia
-          component="img"
-          height="400"
-          image={LogoImg}
-          alt="Logo"
-        />
-      </CardMediaWrapper>
-      {/* <CardContent>
-        <Typography sx={{ textAlign: 'center' }} variant="h3" color="text.primary">
-          Freelance Copywriter
+      <CardContent>
+        <Typography sx={{ textAlign: 'center'}} variant="p" color="text.primary" >
+          <Typography variant="p" style={{margin: "0!important", padding: "0.3rem", display: "block"}}>Direct Response Copywriter</Typography>
+          <Typography variant="p" style={{
+              margin: "0!important",
+              padding: "0.3rem",
+              display: "block"
+            }}>
+              Reach me via &nbsp;
+            <Link
+              variant='a'
+              href="mailto:aonstarr@copystarr.com"
+              target="_blank"
+              style={{
+                display: "inline-block",
+                marginLeft: "3px!important",
+                padding: "0.3rem",
+                textDecoration: "none",
+                border: "2px solid lightblue",
+                borderRadius: "10px"
+              }}>
+              Email
+            </Link>
+          </Typography>
+          <Typography variant="p" style={{
+              margin: "0!important",
+              padding: "0.3rem",
+              display: "block",
+            }}>
+              Book a call Now : &nbsp;
+            <Link
+              variant='a'
+              href="https://calendly.com/copystarr/discovery-call"
+              target="_blank"
+              style={{
+                display: "inline-block",
+                marginLeft: "3px!important",
+                padding: "0.3rem",
+                textDecoration: "none",
+                border: "2px solid lightblue",
+                borderRadius: "10px"
+              }}>
+              Calendly
+            </Link>
+          </Typography>
+          <Typography variant="p"style={{margin: "0!important", padding: "0.3rem", display: "block"}}>
+            Socials : &nbsp;
+            <Link
+              variant='a'
+              href="https://twitter.com/copystarr"
+              target="_blank"
+              style={{
+                display: "inline-block",
+                marginLeft: "3px!important",
+                padding: "0.3rem",
+                textDecoration: "none",
+                border: "2px solid lightblue",
+                borderRadius: "10px"
+              }}>
+              Twitter
+            </Link>
+            &nbsp; , 
+            &nbsp;
+            <Link
+              variant='a'
+              href="https://www.instagram.com/copy_starr/"
+              target="_blank"
+              style={{
+                display: "inline-block",
+                marginLeft: "3px!important",
+                padding: "0.3rem",
+                textDecoration: "none",
+                border: "2px solid lightblue",
+                borderRadius: "10px"
+              }}>
+              Instagram
+            </Link>
+          </Typography>
+          <Typography variant="p"style={{margin: "0!important", padding: "0.3rem", display: "block"}}>
+            I believe in immediate execution without sacrificing the quality of work. You can now competely focus on your brand image since you are the product. I will smoothen out the marketing side of things with content that is produced to sell and breed loyalty.
+          </Typography>
         </Typography>
-      </CardContent> */}
+      </CardContent>
       <CardActions disableSpacing style={{background: '#161616'}}>
-        {/* <span style={{ color: yellow[700], fontSize: '24px', lineHeight: '45px' }}>
-          SOCIALS:
-        </span> */}
         <IconButton aria-label="instagram">
           <Link variant='a' href="https://www.instagram.com/copy_starr" target="_blank">
             <InstagramIcon style={{color: 'white' }} />
@@ -105,15 +154,6 @@ export default function RecipeReviewCard() {
             <TwitterIcon style={{color: 'white' }}  />
           </Link>
         </IconButton>
-        
-        {/* <ExpandMore
-          expand={true}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon style={{color: '#EABA3F' }}/>
-        </ExpandMore> */}
       </CardActions>
       <Collapse in={true} timeout="auto" unmountOnExit>
       <CardContent sx={{ textAlign: 'center', bgcolor: '#141F29' }}>
@@ -122,11 +162,11 @@ export default function RecipeReviewCard() {
             textAlign: 'center',
             textDecoration: 'underline',
             color: 'white',
-            fontFamily: 'Inknut Antiqua'
+            fontFamily: 'Verdana',
+            marginBottom: '3rem'
           }}>
             Sevices
           </ServicesTitle>
-          
         </Typography>
         <Swiper
           spaceBetween={30}
@@ -166,6 +206,18 @@ export default function RecipeReviewCard() {
               Twitter Smartposts
             </ServicesSlideContainer>
           </SwiperSlide>
+          <SwiperSlide>
+            <ServicesSlideContainer
+              style={{ lineHeight: '30px', color: 'white', bgcolor: '#3b5b78'}}>
+              Landing Pages
+            </ServicesSlideContainer>
+          </SwiperSlide>
+          <SwiperSlide>
+            <ServicesSlideContainer
+              style={{ lineHeight: '30px', color: 'white', bgcolor: '#3b5b78'}}>
+              Sales Letter
+            </ServicesSlideContainer>
+          </SwiperSlide>
         </Swiper>
       </CardContent>
       </Collapse>
@@ -182,6 +234,7 @@ const ProfilePicWrapper = styledWrapper.div`
 `
 
 const CardWrapper = styledWrapper(Card)`
+  padding: 1rem;
   background: #1E2F3E!important;
 `;
 
