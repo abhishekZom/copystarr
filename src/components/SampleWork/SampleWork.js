@@ -124,23 +124,6 @@ export default function SampleWork() {
               </SampleImageContainer>
             </ServicesSlideContainer>
           </SwiperSlide>
-          <SwiperSlide>
-            <ServicesSlideContainer>
-              <SampleImageContainer>
-                <CardMediaWrapper>
-                  <CardMedia
-                    component="img"
-                    height="auto"
-                    image={eggcitingImg}
-                    alt="Logo"
-                  />
-                </CardMediaWrapper>
-              </SampleImageContainer>
-            </ServicesSlideContainer>
-          </SwiperSlide>
-
-
-
 
           <SwiperSlide>
             <ServicesSlideContainer>
@@ -248,6 +231,20 @@ export default function SampleWork() {
                     component="img"
                     height="auto"
                     image={StarrImg}
+                    alt="Logo"
+                  />
+                </CardMediaWrapper>
+              </SampleImageContainer>
+            </ServicesSlideContainer>
+          </SwiperSlide>
+          <SwiperSlide>
+            <ServicesSlideContainer>
+              <SampleImageContainer>
+                <CardMediaWrapper>
+                  <CardMedia
+                    component="img"
+                    height="auto"
+                    image={eggcitingImg}
                     alt="Logo"
                   />
                 </CardMediaWrapper>
