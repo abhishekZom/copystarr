@@ -138,7 +138,7 @@ export default function RecipeReviewCard() {
               Instagram
             </Link>
           </Typography>
-          <Typography variant="p"style={{margin: "0!important", padding: "0.3rem", display: "block"}}>
+          <Typography variant="p"style={{margin: "0!important", padding: "2rem", display: "block"}}>
             I believe in immediate execution without sacrificing the quality of work. You can now competely focus on your brand image since you are the product. I will smoothen out the marketing side of things with content that is produced to sell and breed loyalty.
           </Typography>
         </Typography>
@@ -157,10 +157,9 @@ export default function RecipeReviewCard() {
       </CardActions>
       <Collapse in={true} timeout="auto" unmountOnExit>
       <CardContent sx={{ textAlign: 'center', bgcolor: '#141F29' }}>
-        <Typography variant="h3" color="text.primary">
+        <Typography variant="h4" color="text.primary">
           <ServicesTitle style={{
             textAlign: 'center',
-            textDecoration: 'underline',
             color: 'white',
             fontFamily: 'Verdana',
             marginBottom: '3rem'
