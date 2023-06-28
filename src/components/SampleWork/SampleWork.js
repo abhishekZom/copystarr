@@ -230,7 +230,7 @@ export default function SampleWork() {
                   <CardMedia
                     component="img"
                     height="auto"
-                    image={StarrImg}
+                    image={eggcitingImg}
                     alt="Logo"
                   />
                 </CardMediaWrapper>
@@ -244,7 +244,7 @@ export default function SampleWork() {
                   <CardMedia
                     component="img"
                     height="auto"
-                    image={eggcitingImg}
+                    image={StarrImg}
                     alt="Logo"
                   />
                 </CardMediaWrapper>
