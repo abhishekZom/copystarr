@@ -18,7 +18,7 @@ import * as React from 'react';
 import styledWrapper from 'styled-components';
 import AvatarImg from '../../images/copystarr_avatar.jpg';
 import LogoImg from '../../images/copystarr_logo.png';
-import dp from '../../images/dp.jpg';
+import dp from '../../images/profile4.png';
 
 import { Autoplay, EffectCreative } from "swiper";
 import 'swiper/css';
@@ -130,7 +130,6 @@ export default function RecipeReviewCard() {
               }}>
               Twitter
             </Link>
-            &nbsp; , 
             &nbsp;
             <Link
               variant='a'
