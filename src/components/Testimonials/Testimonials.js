@@ -9,15 +9,16 @@ import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import Collapse from '@mui/material/Collapse';
-import { grey, red, yellow } from '@mui/material/colors';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import Link from '@mui/material/Link';
-import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
+import { grey, red, yellow } from '@mui/material/colors';
+import { styled } from '@mui/material/styles';
 import * as React from 'react';
 import styledWrapper from 'styled-components';
 import AvatarImg from '../../images/copystarr_avatar.jpg';
 import LogoImg from '../../images/copystarr_logo.png';
+import testimonial1 from '../../images/testimonial2.png';
 
 
 interface ExpandMoreProps extends IconButtonProps {
@@ -61,8 +62,7 @@ export default function Testimonials() {
       />
       <CardContent sx={{ textAlign: 'center', color: 'white', background: '#3b5b78', border: '1px solid 141F29' }}>
         <span variant="h5" color="text.primary">
-          I help businesses 5-10x their sales by providing high precision conversion copy.
-          I have worked with various clients over a unique combination of niches that all complement each other.
+          I do not consider I have clients until they have made money.
 
         </span>
       </CardContent>
@@ -119,9 +119,12 @@ export default function Testimonials() {
               padding: '0.5rem',
               color: 'white',
               borderRadius: '0.5rem' }} variant="h5" color="text.primary">
-              Aon reached out to me randomly and started giving me insights on my business that 
-              I had never thought of during last 10 years of my operations.
-              My sales were boosted by 1.8x in the 2nd month itself. Great experience. Time for new milestones
+              <CardMedia
+                component="img"
+                height="auto"
+                image={testimonial1}
+                alt="Logo"
+              />
             </Typography>
           </CardContent>
         </TestimonialCard>
