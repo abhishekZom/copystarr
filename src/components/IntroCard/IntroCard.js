@@ -86,8 +86,7 @@ export default function RecipeReviewCard() {
                 padding: "0.3rem",
                 textDecoration: "none",
                 border: "2px solid lightblue",
-                borderRadius: "10px",
-                color: "#cccccc"
+                borderRadius: "10px"
               }}>
               Email
             </Link>
