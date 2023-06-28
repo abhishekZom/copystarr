@@ -230,20 +230,6 @@ export default function SampleWork() {
                   <CardMedia
                     component="img"
                     height="auto"
-                    image={eggcitingImg}
-                    alt="Logo"
-                  />
-                </CardMediaWrapper>
-              </SampleImageContainer>
-            </ServicesSlideContainer>
-          </SwiperSlide>
-          <SwiperSlide>
-            <ServicesSlideContainer>
-              <SampleImageContainer>
-                <CardMediaWrapper>
-                  <CardMedia
-                    component="img"
-                    height="auto"
                     image={StarrImg}
                     alt="Logo"
                   />
