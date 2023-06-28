@@ -9,15 +9,16 @@ import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import Collapse from '@mui/material/Collapse';
-import { grey, red, yellow } from '@mui/material/colors';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import Link from '@mui/material/Link';
-import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
+import { grey, red, yellow } from '@mui/material/colors';
+import { styled } from '@mui/material/styles';
 import * as React from 'react';
 import styledWrapper from 'styled-components';
 import AvatarImg from '../../images/copystarr_avatar.jpg';
 import LogoImg from '../../images/copystarr_logo.png';
+import dp from '../../images/dp.jpg';
 
 import { Autoplay, EffectCreative } from "swiper";
 import 'swiper/css';
@@ -50,6 +51,15 @@ export default function RecipeReviewCard() {
 
   return (
     <CardWrapper sx={{ maxWidth: 1200 , margin: '1rem auto' }}>
+      <ProfilePicWrapper>
+        <CardMedia
+            component="img"
+            width="200"
+            height="200"
+            image={dp}
+            alt="Logo"
+          />
+      </ProfilePicWrapper>
       <CardHeader sx={{ padding: '2rem'}}
         title="Direct Response Copywriter"
         subheader='Reach me at "aonstarr@copystarr.com"'
@@ -163,8 +173,16 @@ export default function RecipeReviewCard() {
   );
 }
 
+const ProfilePicWrapper = styledWrapper.div`
+  width: 200px;
+  height: 200px;
+  margin: 1rem auto;
+  border-radius: 100px;
+  overflow: hidden;
+`
+
 const CardWrapper = styledWrapper(Card)`
-  background: #000;
+  background: #1E2F3E!important;
 `;
 
 const CardMediaWrapper = styledWrapper.div`
