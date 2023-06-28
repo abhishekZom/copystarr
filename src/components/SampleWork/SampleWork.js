@@ -66,7 +66,7 @@ export default function SampleWork() {
           fontSize: '23px',
           textAlign: 'center',
           lineHeight: '30px',
-          fontFamily: 'Inknut Antiqua' }}
+          fontFamily: 'Verdana' }}
         style={{color: '#3b5b78', background: '#141F29' }}
       />
       <CardContent sx={{ textAlign: 'center', background: '#3b5b78' }}>
