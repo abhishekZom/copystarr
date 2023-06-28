@@ -54,8 +54,8 @@ export default function RecipeReviewCard() {
       <ProfilePicWrapper>
         <CardMedia
             component="img"
-            width="200"
-            height="200"
+            width="150"
+            height="150"
             image={dp}
             alt="Logo"
           />
@@ -236,10 +236,10 @@ export default function RecipeReviewCard() {
 }
 
 const ProfilePicWrapper = styledWrapper.div`
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   margin: 1rem auto;
-  border-radius: 100px;
+  border-radius: 75px;
   overflow: hidden;
 `
 
