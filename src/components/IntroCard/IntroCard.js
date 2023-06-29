@@ -50,7 +50,7 @@ export default function RecipeReviewCard() {
   };
 
   return (
-    <CardWrapper sx={{ maxWidth: 1200 , margin: '1rem auto', color: "white" }}>
+    <CardWrapper sx={{ maxWidth: 750 , margin: '1rem auto', color: "white" }}>
       <ProfilePicWrapper>
         <CardMedia
             component="img"
