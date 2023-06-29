@@ -44,7 +44,7 @@ export default function Testimonials() {
   };
 
   return (
-    <Card sx={{ maxWidth: 1200 , margin: '6rem auto' }}>
+    <Card sx={{ maxWidth: 750 , margin: '6rem auto' }}>
       <CardHeader
         action={
           <IconButton aria-label="settings">
