@@ -60,7 +60,7 @@ export default function SampleWork() {
             <MoreVertIcon />
           </IconButton>
         }
-        title="Sample Work"
+        title="Gallery"
         titleTypographyProps = {{
           color: 'white',
           fontSize: '23px',
@@ -268,3 +268,5 @@ const CardMediaWrapper = styledWrapper.div`
 const TestimonialCard = styled(Card)`
   margin: 0rem;
 `;
+
+
