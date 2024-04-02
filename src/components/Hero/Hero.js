@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import BackgroundImg from '../../images/copystarr_background.jpeg';
 import IntroCard from "../IntroCard";
 import SampleWork from "../SampleWork";
 import Testimonials from '../Testimonials';
@@ -8,8 +7,8 @@ import Testimonials from '../Testimonials';
 const Hero = () => {
   return <HeroWrapper>
     <IntroCard></IntroCard>
-    <SampleWork></SampleWork>
     <Testimonials></Testimonials>
+    <SampleWork></SampleWork>
   </HeroWrapper>
 }
 

@@ -1,56 +1,20 @@
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import Avatar from '@mui/material/Avatar';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import Collapse from '@mui/material/Collapse';
-import IconButton, { IconButtonProps } from '@mui/material/IconButton';
-import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
-import { grey, red, yellow } from '@mui/material/colors';
 import { styled } from '@mui/material/styles';
 import * as React from 'react';
-import styledWrapper from 'styled-components';
-import AvatarImg from '../../images/copystarr_avatar.jpg';
-import LogoImg from '../../images/copystarr_logo.png';
 import testimonial1 from '../../images/testimonial2.png';
 
-
-interface ExpandMoreProps extends IconButtonProps {
-  expand: boolean;
-}
-
-const ExpandMore = styled((props: ExpandMoreProps) => {
-  const { expand, ...other } = props;
-  return <IconButton {...other} />;
-})(({ theme, expand }) => ({
-  transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
-  marginLeft: 'auto',
-  transition: theme.transitions.create('transform', {
-    duration: theme.transitions.duration.shortest,
-  }),
-}));
-
 export default function Testimonials() {
-  const [expanded, setExpanded] = React.useState(true);
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
+  const [expanded] = React.useState(true);
 
   return (
     <Card sx={{ maxWidth: 750 , margin: '6rem auto' }}>
       <CardHeader
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
         title="Testimonials"
         titleTypographyProps = {{
           color: 'white',
@@ -60,35 +24,32 @@ export default function Testimonials() {
           fontFamily: 'Verdana' }}
         style={{color: 'white', background: '#141F29' }}
       />
-      <CardActions disableSpacing style={{background: '#141F29'}}>
-        <span style={{ 
-          color: 'white',
-          width: '100%',
-          textAlign:'right'
-          }}>see more</span>
-        <ExpandMore
-          expand={expanded}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="more"
-        >
-          <Typography sx={{ color: 'white' }} variant="span" color="text.primary"></Typography>
-          <ExpandMoreIcon style={{color: 'white' }}/>
-        </ExpandMore>
-      </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
       <CardContent sx={{ bgcolor: '#3b5b78', padding: '1rem' }}>
+        <p style={{
+            display: "flex",
+            justifyContent: "center",
+            textDecoration: "underline",
+            color: "white",
+          }}>
+          <a
+            href="https://drive.google.com/drive/folders/1oM4jKPJkhTMYW-RYK55bbqzEJJryI7hi?usp=sharing" 
+            target="_blank"
+            style={{
+            display: "flex",
+            justifyContent: "center",
+            textDecoration: "underline",
+            color: "white",
+            lineHeight: "18px",
+            fontSize: "18px"
+          }}>Click see all testimonials</a>
+        </p>
         <TestimonialCard>
           <CardHeader
             avatar={
               <Avatar sx={{ bgcolor: '#3b5b78' }} aria-label="recipe">
                 KL
               </Avatar>
-            }
-            action={
-              <IconButton aria-label="settings">
-                <MoreVertIcon />
-              </IconButton>
             }
             title="Name: K. S. Luthra"
             subheader="(Tohima Filters)"
@@ -127,16 +88,6 @@ export default function Testimonials() {
     </Card>
   );
 }
-
-const CardMediaWrapper = styledWrapper.div`
-  display: flex;
-  -webkit-box-shadow: -10px 7px 16px -6px rgba(0,0,0,0.39);
-  -moz-box-shadow: -10px 7px 16px -6px rgba(0,0,0,0.39);
-  box-shadow: -10px 7px 16px -6px rgba(0,0,0,0.39);
-  margin-bottom: 0.5rem;
-  margin-left: 0.5rem;
-  padding: 1rem;
-`;
 
 const TestimonialCard = styled(Card)`
   margin: 0rem;

@@ -3,13 +3,10 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
-import IconButton, { IconButtonProps } from '@mui/material/IconButton';
-import { styled } from '@mui/material/styles';
+import IconButton from '@mui/material/IconButton';
 import * as React from 'react';
 import styledWrapper from 'styled-components';
 
-import eggcitingImg from '../../images/eggciting.png';
-import Kitty1Img from '../../images/kitty.jpg';
 import Meta from '../../images/meta.png';
 import proImg from '../../images/pro.png';
 import Pro1Img from '../../images/pro1.png';
@@ -17,40 +14,22 @@ import Pro2Img from '../../images/pro2.png';
 import Sentient1Img from '../../images/sentient1.png';
 import Sentient2Img from '../../images/sentient2.png';
 import Sentient3Img from '../../images/sentient3.png';
-import Sentient4Img from '../../images/sentient4.jpg';
 import StarrImg from '../../images/starr.jpg';
 import tohima1Img from '../../images/tohima1.png';
 import tohima2Img from '../../images/tohima2.png';
 import Work1Img from '../../images/work1.jpg';
+import email1 from '../../images/email1.png';
+import email2 from '../../images/email2.png';
+import email3 from '../../images/email3.png';
 
-import { Autoplay, EffectCards, EffectCreative, Navigation, Pagination } from "swiper";
+import { EffectCards } from "swiper";
 import 'swiper/css';
 import "swiper/css/effect-creative";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-interface ExpandMoreProps extends IconButtonProps {
-  expand: boolean;
-}
-
-const ExpandMore = styled((props: ExpandMoreProps) => {
-  const { expand, ...other } = props;
-  return <IconButton {...other} />;
-})(({ theme, expand }) => ({
-  transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
-  marginLeft: 'auto',
-  transition: theme.transitions.create('transform', {
-    duration: theme.transitions.duration.shortest,
-  }),
-}));
-
 export default function SampleWork() {
-  const [expanded, setExpanded] = React.useState(true);
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
 
   return (
     <Card sx={{ maxWidth: 750 , margin: '6rem auto' }}>
@@ -72,9 +51,9 @@ export default function SampleWork() {
       <CardContent sx={{ textAlign: 'center', background: '#3b5b78' }}>
       <Swiper
           centeredSlides={true}
-          effect={"cards"}
+          effect={"cube"}
           grabCursor={true}
-          modules={[EffectCards]}
+          modules={[EffectCards, ]}
           className="mySwiper"
           autoplay={{
             delay: 1000,
@@ -82,6 +61,48 @@ export default function SampleWork() {
           }}
           loop={true}
         >
+          <SwiperSlide>
+          <SwiperSlide>
+          <SwiperSlide>
+            <ServicesSlideContainer>
+              <SampleImageContainer>
+                <CardMediaWrapper>
+                  <CardMedia
+                    component="img"
+                    height="auto"
+                    image={email1}
+                    alt="Logo"
+                  />
+                </CardMediaWrapper>
+              </SampleImageContainer>
+            </ServicesSlideContainer>
+          </SwiperSlide>
+            <ServicesSlideContainer>
+              <SampleImageContainer>
+                <CardMediaWrapper>
+                  <CardMedia
+                    component="img"
+                    height="auto"
+                    image={email2}
+                    alt="Logo"
+                  />
+                </CardMediaWrapper>
+              </SampleImageContainer>
+            </ServicesSlideContainer>
+          </SwiperSlide>
+            <ServicesSlideContainer>
+              <SampleImageContainer>
+                <CardMediaWrapper>
+                  <CardMedia
+                    component="img"
+                    height="auto"
+                    image={email3}
+                    alt="Logo"
+                  />
+                </CardMediaWrapper>
+              </SampleImageContainer>
+            </ServicesSlideContainer>
+          </SwiperSlide>
           <SwiperSlide>
             <ServicesSlideContainer>
               <SampleImageContainer>
@@ -264,9 +285,4 @@ const CardMediaWrapper = styledWrapper.div`
   display: flex;
   margin-bottom: 0.5rem;
 `;
-
-const TestimonialCard = styled(Card)`
-  margin: 0rem;
-`;
-
 
