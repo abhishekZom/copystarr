@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copystarr - Professional Copywriting Services</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #0a0e2a 0%, #1a1f3a 25%, #0d1b2a 50%, #1b2735 75%, #0a0e2a 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.02) 0%, transparent 50%),
+                radial-gradient(circle at 60% 70%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(13, 27, 42, 0.1);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #d4af37;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 400;
+            font-size: 1.05rem;
+            letter-spacing: 0.3px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #d4af37;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #333;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .parallax-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 120%;
+            height: 120%;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            will-change: transform;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(13, 27, 42, 0.95) 0%, rgba(27, 39, 53, 0.9) 100%), 
+                        radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+                        url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            z-index: 1;
+            transition: opacity 0.5s ease;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 2;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 3;
+        }
+
+        .hero-content {
+            position: relative;
+            text-align: center;
+            color: white;
+            max-width: 800px;
+            padding: 0 2rem;
+            z-index: 4;
+        }
+
+        .video-loader {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(255, 255, 255, 0.4);
+            border-top: 3px solid #d4af37;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            z-index: 5;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        .video-loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #d4af37, #f4d03f);
+            color: #1a1a1a;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+            animation: fadeInUp 1s ease 0.6s both;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        /* Brand Messaging Section */
+        .brand-messaging {
+            background: linear-gradient(135deg, #0d1b2a 0%, #1b2735 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+
+        .brand-messaging::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1515378791036-0648a814c963?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            pointer-events: none;
+            opacity: 1;
+            will-change: transform;
+            transform: translateY(var(--messaging-parallax, 0px));
+        }
+
+        .brand-messaging .section-title {
+            color: white;
+        }
+
+        .messaging-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .message-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .message-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            color: #d4af37;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+
+        .message-card p {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+            letter-spacing: 0.3px;
+        }
+
+        /* Services Section */
+        .services {
+            background: linear-gradient(135deg, #0d1b2a 0%, #1b2735 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+
+
+
+        .services .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .services .section-title {
+            color: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.6s ease, opacity 0.6s ease;
+            transform: translateY(50px);
+            opacity: 0.5;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: #d4af37;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            color: #d4af37;
+            letter-spacing: 0.5px;
+        }
+
+        .service-card p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+            letter-spacing: 0.3px;
+        }
+
+        /* Packages Section */
+        .packages {
+            background: linear-gradient(135deg, #0d1b2a 0%, #1b2735 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+
+
+
+        .packages .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .packages .section-title {
+            color: white;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .package-card {
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+
+
+        .package-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            color: #d4af37;
+            letter-spacing: 0.5px;
+        }
+
+        .package-price {
+            font-size: 1.4rem;
+            font-weight: normal;
+            margin-bottom: 1rem;
+            color: #d4af37;
+        }
+
+        .package-description {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+            letter-spacing: 0.3px;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: linear-gradient(135deg, #0d1b2a 0%, #1b2735 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+
+
+
+        .testimonials .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonials .section-title {
+            color: white;
+        }
+
+        .testimonials-carousel {
+            position: relative;
+            overflow: hidden;
+            margin-top: 3rem;
+        }
+
+        .testimonials-container {
+            display: flex;
+            transition: transform 0.5s ease;
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            min-width: calc(33.333% - 1.333rem);
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .testimonial-content {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+            letter-spacing: 0.3px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #d4af37, #f4d03f);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .author-info h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #d4af37;
+            letter-spacing: 0.3px;
+        }
+
+        .author-info p {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 300;
+        }
+
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .carousel-btn {
+            background: #d4af37;
+            color: #1a1a1a;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .carousel-btn:hover {
+            background: #f4d03f;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #0d1b2a 0%, #1b2735 100%);
+            color: white;
+            position: relative;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 40% 40%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .contact .section-title {
+            color: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item i {
+            font-size: 1.2rem;
+            color: #d4af37;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            placeholder-color: rgba(255, 255, 255, 0.7);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .submit-btn {
+            background: #d4af37;
+            color: #1a1a1a;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: #f4d03f;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #0a0e2a 0%, #1a1f3a 25%, #0d1b2a 50%, #1b2735 75%, #0a0e2a 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+            position: relative;
+            overflow: hidden;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 30% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(212, 175, 55, 0.06) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .footer-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #d4af37;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes parallaxMove {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(-50px); }
+        }
+
+        .floating-element {
+            position: absolute;
+            animation: float 6s ease-in-out infinite;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        .floating-icon-1 {
+            top: 20%;
+            left: 10%;
+            font-size: 3rem;
+            color: #d4af37;
+            animation-delay: 0s;
+        }
+
+        .floating-icon-2 {
+            top: 60%;
+            right: 15%;
+            font-size: 2.5rem;
+            color: #d4af37;
+            animation-delay: 2s;
+        }
+
+        .floating-icon-3 {
+            top: 40%;
+            left: 80%;
+            font-size: 2rem;
+            color: #d4af37;
+            animation-delay: 4s;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: rgba(13, 27, 42, 0.95);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: left 0.3s ease;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .testimonial-card {
+                min-width: 100%;
+            }
+
+            .messaging-grid,
+            .services-grid,
+            .packages-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#home" class="logo">Copystarr</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <video class="hero-video" muted playsinline preload="auto">
+            <source src="./C0410.MP4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="video-loader"></div>
+        <div class="hero-content">
+            <h1>Words That Convert</h1>
+            <p>Transform your brand's message into compelling copy that drives results and connects with your audience</p>
+            <a href="#contact" class="cta-button">Start Your Project</a>
+        </div>
+    </section>
+
+    <!-- Brand Messaging Section -->
+    <section id="about" class="section brand-messaging">
+        <div class="container">
+            <h2 class="section-title">Why Copy Matters</h2>
+            <div class="messaging-grid">
+                <div class="message-card">
+                    <h3>Our Motto</h3>
+                    <p>"Every word has the power to inspire action. We craft copy that doesn't just communicate—it converts, connects, and creates lasting impact."</p>
+                </div>
+                <div class="message-card">
+                    <h3>Our Mission</h3>
+                    <p>To bridge the gap between brands and their audiences through strategic, compelling copy that drives meaningful engagement and measurable results.</p>
+                </div>
+                <div class="message-card">
+                    <h3>Why Copy Matters</h3>
+                    <p>In a world overwhelmed by content, the right words cut through the noise. Great copy builds trust, clarifies value, and motivates action—turning browsers into buyers and visitors into loyal customers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services">
+        <div class="floating-element floating-icon-1"><i class="fas fa-pen-nib"></i></div>
+        <div class="floating-element floating-icon-2"><i class="fas fa-lightbulb"></i></div>
+        <div class="floating-element floating-icon-3"><i class="fas fa-rocket"></i></div>
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
+                    <h3>Sales Page Copy</h3>
+                    <p>High-converting sales pages that turn visitors into customers with persuasive, benefit-driven copy.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-envelope"></i></div>
+                    <h3>Email Marketing</h3>
+                    <p>Engaging email sequences that nurture leads and drive conversions through strategic storytelling.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Landing Pages</h3>
+                    <p>Focused landing page copy that captures attention and drives specific actions with clear messaging.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Website Copy</h3>
+                    <p>Complete website copywriting that tells your brand story and guides visitors through their journey.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-share-alt"></i></div>
+                    <h3>Social Media Copy</h3>
+                    <p>Engaging social media content that builds community and drives engagement across all platforms.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-ad"></i></div>
+                    <h3>Ad Copy</h3>
+                    <p>Compelling ad copy for Google, Facebook, and other platforms that maximizes click-through rates.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="section packages">
+        <div class="container">
+            <h2 class="section-title">Packages & Pricing</h2>
+            <div class="packages-grid">
+                <div class="package-card">
+                    <h3>Sales Page</h3>
+                    <div class="package-price">$3,000</div>
+                    <p class="package-description">Complete high-converting sales page with headlines, body copy, and call-to-actions designed to maximize conversions.</p>
+                </div>
+                <div class="package-card">
+                    <h3>Email Sequence</h3>
+                    <div class="package-price">$3,000</div>
+                    <p class="package-description">30 short-form email copy pieces for nurturing campaigns, product launches, or customer retention.</p>
+                </div>
+                <div class="package-card">
+                    <h3>Landing Page</h3>
+                    <div class="package-price">$300</div>
+                    <p class="package-description">Focused landing page copy with compelling headlines and persuasive content to drive specific actions.</p>
+                </div>
+                <div class="package-card">
+                    <h3>Website + Landing</h3>
+                    <div class="package-price">$500</div>
+                    <p class="package-description">Complete website copy package including landing page optimization for maximum impact and conversions.</p>
+                </div>
+                <div class="package-card">
+                    <h3>Social Media Bundle</h3>
+                    <div class="package-price">$800</div>
+                    <p class="package-description">30 days of social media content including captions, hashtags, and engagement-driven copy.</p>
+                </div>
+                <div class="package-card">
+                    <h3>Complete Brand Package</h3>
+                    <div class="package-price">$5,000</div>
+                    <p class="package-description">Full brand copywriting including website, sales pages, email sequences, and brand messaging guidelines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials">
+        <div class="floating-element floating-icon-1"><i class="fas fa-quote-left"></i></div>
+        <div class="floating-element floating-icon-2"><i class="fas fa-star"></i></div>
+        <div class="floating-element floating-icon-3"><i class="fas fa-heart"></i></div>
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="testimonials-carousel">
+                <div class="testimonials-container">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            "Copystarr transformed our website copy and increased our conversion rate by 150%. Their understanding of our brand voice was exceptional."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SJ</div>
+                            <div class="author-info">
+                                <h4>Sarah Johnson</h4>
+                                <p>CEO, TechStart Inc.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            "The email sequences created by Copystarr generated over $100K in revenue in just 3 months. Their strategic approach is unmatched."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MR</div>
+                            <div class="author-info">
+                                <h4>Mike Rodriguez</h4>
+                                <p>Marketing Director, GrowthCo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            "Professional, creative, and results-driven. Copystarr delivered copy that truly resonated with our audience and drove immediate results."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">EL</div>
+                            <div class="author-info">
+                                <h4>Emily Chen</h4>
+                                <p>Founder, Wellness Brand</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            "Working with Copystarr was a game-changer. Their sales page copy increased our conversion rate from 2% to 8% within the first month."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">DJ</div>
+                            <div class="author-info">
+                                <h4>David Kim</h4>
+                                <p>Product Manager, SaaS Co</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            "The attention to detail and strategic thinking behind every word is what sets Copystarr apart. Highly recommend for any business."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AL</div>
+                            <div class="author-info">
+                                <h4>Amanda Lopez</h4>
+                                <p>Creative Director, Agency Plus</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Let's Create Something Amazing</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>hello@copystarr.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+1 (555) 123-4567</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>New York, NY</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Mon-Fri 9AM-6PM EST</span>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="project">Project Type</label>
+                        <input type="text" id="project" name="project" placeholder="e.g., Sales Page, Email Sequence">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#cookie">Cookie Policy</a>
+            </div>
+            <p>&copy; 2024 Copystarr™. All rights reserved. Professional copywriting services that convert.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Testimonials Carousel
+        const testimonialsContainer = document.querySelector('.testimonials-container');
+        const testimonialCards = document.querySelectorAll('.testimonial-card');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        let currentIndex = 0;
+        const cardWidth = testimonialCards[0].offsetWidth + 32; // width + gap
+        const visibleCards = 3;
+        const maxIndex = testimonialCards.length - visibleCards;
+
+        function updateCarousel() {
+            const translateX = -currentIndex * cardWidth;
+            testimonialsContainer.style.transform = `translateX(${translateX}px)`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if (currentIndex < maxIndex) {
+                currentIndex++;
+                updateCarousel();
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
+        });
+
+        // Auto-scroll testimonials
+        setInterval(() => {
+            if (currentIndex < maxIndex) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            updateCarousel();
+        }, 5000);
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Contact form submission
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We\'ll get back to you within 24 hours.');
+            this.reset();
+        });
+
+        // Header background change on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(13, 27, 42, 0.15)';
+            } else {
+                header.style.background = 'rgba(13, 27, 42, 0.1)';
+            }
+        });
+
+        // Responsive carousel adjustment
+        function adjustCarousel() {
+            if (window.innerWidth <= 768) {
+                // Mobile: show 1 card at a time
+                testimonialsContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+            } else {
+                updateCarousel();
+            }
+        }
+
+        window.addEventListener('resize', adjustCarousel);
+
+        // Enhanced Parallax Effects
+        function handleParallax() {
+            const scrolled = window.pageYOffset;
+            const windowHeight = window.innerHeight;
+            
+            // Brand messaging section parallax
+            const messagingElement = document.querySelector('.brand-messaging');
+            if (messagingElement) {
+                const messagingTop = messagingElement.offsetTop;
+                const messagingHeight = messagingElement.offsetHeight;
+                
+                if (scrolled + windowHeight > messagingTop - 200 && scrolled < messagingTop + messagingHeight + 200) {
+                    const parallaxRate = (scrolled - messagingTop + 200) * 0.3;
+                    messagingElement.style.setProperty('--messaging-parallax', `${parallaxRate}px`);
+                }
+            }
+            
+            // Services section enhanced parallax
+            const servicesElement = document.querySelector('.services');
+            if (servicesElement) {
+                const servicesTop = servicesElement.offsetTop;
+                const servicesHeight = servicesElement.offsetHeight;
+                
+                if (scrolled + windowHeight > servicesTop - 200 && scrolled < servicesTop + servicesHeight + 200) {
+                    const parallaxRate = (scrolled - servicesTop + 200) * 0.4;
+                    const rotateRate = (scrolled - servicesTop) * 0.02;
+                    servicesElement.style.setProperty('--parallax-offset', `${parallaxRate}px`);
+                    servicesElement.style.transform = `translateY(${parallaxRate * 0.3}px) rotateX(${rotateRate}deg)`;
+                }
+            }
+            
+            // Packages section enhanced parallax
+            const packagesElement = document.querySelector('.packages');
+            if (packagesElement) {
+                const packagesTop = packagesElement.offsetTop;
+                const packagesHeight = packagesElement.offsetHeight;
+                
+                if (scrolled + windowHeight > packagesTop - 200 && scrolled < packagesTop + packagesHeight + 200) {
+                    const parallaxRate = (scrolled - packagesTop + 200) * 0.35;
+                    const scaleRate = 1 + (scrolled - packagesTop) * 0.0001;
+                    packagesElement.style.setProperty('--packages-parallax', `${parallaxRate}px`);
+                    packagesElement.style.transform = `translateY(${parallaxRate * 0.25}px) scale(${scaleRate})`;
+                }
+            }
+            
+            // Testimonials section enhanced parallax
+            const testimonialsElement = document.querySelector('.testimonials');
+            if (testimonialsElement) {
+                const testimonialsTop = testimonialsElement.offsetTop;
+                const testimonialsHeight = testimonialsElement.offsetHeight;
+                
+                if (scrolled + windowHeight > testimonialsTop - 200 && scrolled < testimonialsTop + testimonialsHeight + 200) {
+                    const parallaxRate = (scrolled - testimonialsTop + 200) * 0.45;
+                    const skewRate = (scrolled - testimonialsTop) * 0.008;
+                    testimonialsElement.style.setProperty('--testimonials-parallax', `${parallaxRate}px`);
+                    testimonialsElement.style.transform = `translateY(${parallaxRate * 0.35}px) skewY(${skewRate}deg)`;
+                }
+            }
+            
+            // Contact section parallax
+            const contactElement = document.querySelector('.contact');
+            if (contactElement) {
+                const contactTop = contactElement.offsetTop;
+                const contactHeight = contactElement.offsetHeight;
+                
+                if (scrolled + windowHeight > contactTop - 200 && scrolled < contactTop + contactHeight + 200) {
+                    const parallaxRate = (scrolled - contactTop + 200) * 0.25;
+                    contactElement.style.transform = `translateY(${parallaxRate * 0.2}px)`;
+                }
+            }
+            
+            // Individual card parallax effects
+            const allCards = document.querySelectorAll('.message-card, .service-card, .package-card, .testimonial-card');
+            allCards.forEach((card, index) => {
+                const cardTop = card.offsetTop;
+                const cardHeight = card.offsetHeight;
+                
+                if (scrolled + windowHeight > cardTop && scrolled < cardTop + cardHeight + windowHeight) {
+                    const progress = (scrolled + windowHeight - cardTop) / (cardHeight + windowHeight);
+                    const parallaxValue = (progress - 0.5) * 40 * (index % 2 === 0 ? 1 : -1);
+                    const rotateValue = (progress - 0.5) * 4 * (index % 2 === 0 ? 1 : -1);
+                    
+                    card.style.transform = `translateY(${parallaxValue}px) rotateY(${rotateValue}deg)`;
+                }
+            });
+            
+            // Enhanced floating elements parallax
+            const floatingElements = document.querySelectorAll('.floating-element');
+            floatingElements.forEach((element, index) => {
+                const speed = 0.3 + (index * 0.15);
+                const horizontalSpeed = 0.1 + (index * 0.05);
+                const yPos = -(scrolled * speed);
+                const xPos = Math.sin(scrolled * 0.001 + index) * 20;
+                element.style.transform = `translateY(${yPos}px) translateX(${xPos}px) rotate(${scrolled * 0.1}deg)`;
+            });
+            
+            // Enhanced hero content parallax
+            const heroContent = document.querySelector('.hero-content');
+            if (heroContent && scrolled < windowHeight) {
+                const parallaxValue = scrolled * 0.6;
+                const scaleValue = 1 + (scrolled / windowHeight) * 0.1;
+                heroContent.style.transform = `translateY(${parallaxValue}px) scale(${scaleValue})`;
+                heroContent.style.opacity = 1 - (scrolled / windowHeight) * 0.3;
+            }
+            
+            // Service cards stagger animation on scroll
+            const serviceCards = document.querySelectorAll('.service-card');
+            serviceCards.forEach((card, index) => {
+                const cardTop = card.offsetTop;
+                const cardHeight = card.offsetHeight;
+                
+                if (scrolled + windowHeight > cardTop + 100) {
+                    card.style.transform = `translateY(0px)`;
+                    card.style.opacity = '1';
+                } else {
+                    card.style.transform = `translateY(50px)`;
+                    card.style.opacity = '0.5';
+                }
+            });
+        }
+
+        // Smooth parallax with requestAnimationFrame
+        let ticking = false;
+        function requestTick() {
+            if (!ticking) {
+                requestAnimationFrame(handleParallax);
+                ticking = true;
+            }
+        }
+
+        function handleScroll() {
+            requestTick();
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Hero video loading handler
+        const heroVideo = document.querySelector('.hero-video');
+        const heroBackground = document.querySelector('.hero-background');
+        const videoLoader = document.querySelector('.video-loader');
+
+        let videoLoaded = false;
+
+        function hideLoader() {
+            if (!videoLoaded) {
+                videoLoaded = true;
+                // Only fade out background if video is actually playing
+                if (heroVideo && !heroVideo.paused && heroVideo.readyState >= 3) {
+                    // Video is playing successfully, fade out background
+                    if (heroBackground) {
+                        heroBackground.style.opacity = '0';
+                    }
+                    console.log('Video loaded and playing - hiding background');
+                } else {
+                    // Video failed, keep background visible
+                    if (heroBackground) {
+                        heroBackground.style.opacity = '1';
+                    }
+                    console.log('Video failed - keeping background visible');
+                }
+                // Hide the loader
+                if (videoLoader) {
+                    videoLoader.classList.add('hidden');
+                }
+            }
+        }
+
+        // Debug video state
+        console.log('Video element:', heroVideo);
+        console.log('Video source:', heroVideo.src);
+        console.log('Video ready state:', heroVideo.readyState);
+        console.log('Video paused:', heroVideo.paused);
+        console.log('Video current time:', heroVideo.currentTime);
+
+        // Multiple event listeners for better compatibility
+        heroVideo.addEventListener('loadstart', () => console.log('Video loadstart'));
+        heroVideo.addEventListener('loadedmetadata', () => {
+            console.log('Video metadata loaded');
+            // Immediately set to 30 seconds when metadata is available
+            heroVideo.currentTime = 30;
+            console.log('Set video start time to 30 seconds (metadata loaded)');
+        });
+        heroVideo.addEventListener('loadeddata', () => {
+            console.log('Video data loaded');
+            // Set start time to 30 seconds immediately
+            heroVideo.currentTime = 30;
+            console.log('Set video start time to 30 seconds');
+            hideLoader();
+        });
+        heroVideo.addEventListener('canplay', () => {
+            console.log('Video can play');
+            // Set start time to 30 seconds if not already set
+            if (heroVideo.currentTime < 30) {
+                heroVideo.currentTime = 30;
+                console.log('Set video start time to 30 seconds (canplay)');
+            }
+            hideLoader();
+        });
+        heroVideo.addEventListener('canplaythrough', () => {
+            console.log('Video can play through');
+            // Set start time to 30 seconds if not already set
+            if (heroVideo.currentTime < 30) {
+                heroVideo.currentTime = 30;
+                console.log('Set video start time to 30 seconds (canplaythrough)');
+            }
+            hideLoader();
+        });
+        heroVideo.addEventListener('playing', () => {
+            console.log('Video is playing');
+            hideLoader();
+        });
+
+        // Custom loop from 30 seconds to end
+        heroVideo.addEventListener('ended', () => {
+            console.log('Video ended, restarting from 30 seconds');
+            heroVideo.currentTime = 30;
+            heroVideo.play();
+        });
+
+        // Force play after a short delay
+        setTimeout(() => {
+            console.log('Attempting to play video...');
+            console.log('Video current source:', heroVideo.currentSrc);
+            console.log('Video network state:', heroVideo.networkState);
+            console.log('Video ready state:', heroVideo.readyState);
+            
+            // Set start time to 30 seconds before playing
+            if (heroVideo.readyState >= 1) {
+                heroVideo.currentTime = 30;
+                console.log('Set video start time to 30 seconds before play');
+            }
+            
+            heroVideo.play().then(() => {
+                console.log('Video play() succeeded');
+                hideLoader();
+            }).catch(err => {
+                console.log('Video play() failed:', err);
+                console.log('Using background image only');
+                heroVideo.style.display = 'none';
+                // Ensure background stays visible
+                if (heroBackground) {
+                    heroBackground.style.opacity = '1';
+                }
+                hideLoader();
+            });
+        }, 1000);
+
+        // Fallback: Hide loader after 5 seconds regardless
+        setTimeout(() => {
+            if (!videoLoaded) {
+                console.log('Video loading timeout - hiding loader anyway');
+                hideLoader();
+            }
+        }, 5000);
+
+        // Handle video errors
+        heroVideo.addEventListener('error', function(e) {
+            console.log('Video error:', e);
+            console.log('Video error details:', heroVideo.error);
+            hideLoader();
+        });
+    </script>
+</body>
+</html>
