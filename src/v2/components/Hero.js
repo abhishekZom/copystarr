@@ -140,16 +140,19 @@ const HeroTitle = styled.h1`
   font-size: 4rem;
   font-weight: 700;
   color: white;
+  margin-top: 2rem;
   margin-bottom: 1.5rem;
   line-height: 1.2;
   letter-spacing: 1px;
 
   @media (max-width: 768px) {
     font-size: 2.5rem;
+    margin-top: 1.5rem;
   }
 
   @media (max-width: 480px) {
     font-size: 2rem;
+    margin-top: 1rem;
   }
 `;
 
