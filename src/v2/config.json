@@ -172,26 +172,12 @@
           }
         },
         {
-          "emilyRodriguez": {
-            "name": "Emily Rodriguez",
-            "role": "Startup Founder",
-            "company": "GreenTech Solutions",
-            "testimonialText": {
-              "text": "Professional and results-driven. Perfect value proposition for investors.",
-              "color": "rgba(255, 255, 255, 0.95)"
-            },
-            "nameColor": "#d4af37",
-            "roleColor": "rgba(255, 255, 255, 0.8)",
-            "companyColor": "rgba(255, 255, 255, 0.6)"
-          }
-        },
-        {
           "davidThompson": {
-            "name": "David Thompson",
-            "role": "CEO",
-            "company": "Digital Dynamics",
+            "name": "Kabir S. Luthra",
+            "role": "Director",
+            "company": "Tohima Filter",
             "testimonialText": {
-              "text": "Immediate ROI. Landing page conversions doubled within the first week.",
+              "text": "Thanks for the custom templates for outreach. After a 40min long call, we are expanding. This has been such a ride. Great work!",
               "color": "rgba(255, 255, 255, 0.95)"
             },
             "nameColor": "#d4af37",
