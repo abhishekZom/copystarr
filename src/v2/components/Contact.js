@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -7,6 +8,7 @@ const Contact = () => {
     email: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -17,8 +19,34 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Thank you for your message! We'll get back to you within 24 hours.");
-    setFormData({ name: '', email: '', message: '' });
+    setIsSubmitting(true);
+
+    // EmailJS configuration - you'll need to replace these with your actual values
+    const serviceId = 'YOUR_SERVICE_ID'; // Replace with your service ID
+    const templateId = 'YOUR_TEMPLATE_ID'; // Replace with your template ID  
+    const publicKey = 'YOUR_PUBLIC_KEY'; // Replace with your public key
+
+    // Create template parameters
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      message: formData.message,
+      to_name: 'CopyStarr Team', // Your name/company
+    };
+
+    emailjs.send(serviceId, templateId, templateParams, publicKey)
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        alert("Thank you for your message! We'll get back to you within 24 hours.");
+        setFormData({ name: '', email: '', message: '' });
+      })
+      .catch((error) => {
+        console.error('FAILED...', error);
+        alert('Sorry, there was an error sending your message. Please try again or email us directly.');
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
 
   return (
@@ -114,9 +142,9 @@ const Contact = () => {
               />
             </FormGroup>
             
-            <SubmitButton type="submit">
-              Send Message
-              <i className="fas fa-paper-plane"></i>
+            <SubmitButton type="submit" disabled={isSubmitting}>
+              {isSubmitting ? 'Sending...' : 'Send Message'}
+              <i className={isSubmitting ? "fas fa-spinner fa-spin" : "fas fa-paper-plane"}></i>
             </SubmitButton>
           </ContactForm>
         </ContactContent>
