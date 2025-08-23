@@ -43,20 +43,6 @@ const Hero = () => {
           Get Started Today
           <i className="fas fa-arrow-right" style={{ marginLeft: '10px' }}></i>
         </CTAButton>
-        <HeroStats>
-          <StatItem>
-            <StatNumber>500+</StatNumber>
-            <StatLabel>Projects Completed</StatLabel>
-          </StatItem>
-          <StatItem>
-            <StatNumber>98%</StatNumber>
-            <StatLabel>Client Satisfaction</StatLabel>
-          </StatItem>
-          <StatItem>
-            <StatNumber>2M+</StatNumber>
-            <StatLabel>Words Written</StatLabel>
-          </StatItem>
-        </HeroStats>
       </HeroContent>
       <ScrollIndicator>
         <i className="fas fa-chevron-down"></i>
@@ -201,49 +187,6 @@ const CTAButton = styled.a`
     padding: 0.8rem 2rem;
     font-size: 1rem;
     margin-bottom: 3rem;
-  }
-`;
-
-const HeroStats = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 4rem;
-  margin-top: 2rem;
-
-  @media (max-width: 768px) {
-    gap: 2rem;
-    flex-wrap: wrap;
-  }
-
-  @media (max-width: 480px) {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-`;
-
-const StatItem = styled.div`
-  text-align: center;
-`;
-
-const StatNumber = styled.div`
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #d4af37;
-  margin-bottom: 0.5rem;
-
-  @media (max-width: 768px) {
-    font-size: 2rem;
-  }
-`;
-
-const StatLabel = styled.div`
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.8);
-  font-weight: 300;
-  letter-spacing: 0.3px;
-
-  @media (max-width: 768px) {
-    font-size: 0.9rem;
   }
 `;
 
