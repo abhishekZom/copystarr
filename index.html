@@ -92,6 +92,32 @@
             color: #d4af37;
         }
 
+        .nav-links a.active {
+            color: #d4af37;
+            position: relative;
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #d4af37, #f4d03f);
+            border-radius: 1px;
+            animation: underlineGlow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes underlineGlow {
+            0% {
+                box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+            }
+            100% {
+                box-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+            }
+        }
+
         .menu-toggle {
             display: none;
             flex-direction: column;
@@ -347,7 +373,7 @@
 
         .service-icon {
             font-size: 3rem;
-            color: #d4af37;
+            color: white;
             margin-bottom: 1rem;
         }
 
@@ -1142,6 +1168,11 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
+                    
+                    // Update active tab immediately after clicking
+                    setTimeout(() => {
+                        updateActiveTab();
+                    }, 100);
                 }
             });
         });
@@ -1153,7 +1184,7 @@
             this.reset();
         });
 
-        // Header background change on scroll
+        // Header background change on scroll and active tab tracking
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
@@ -1161,6 +1192,51 @@
             } else {
                 header.style.background = 'rgba(13, 27, 42, 0.1)';
             }
+
+            // Update active tab based on scroll position
+            updateActiveTab();
+        });
+
+        // Function to update active tab based on current section
+        function updateActiveTab() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+            
+            let currentSection = '';
+            const scrollPosition = window.scrollY + 200; // Offset for header height
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            // Remove active class from all nav links
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // Add active class to current section's nav link
+            if (currentSection) {
+                const activeLink = document.querySelector(`.nav-links a[href="#${currentSection}"]`);
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
+            } else {
+                // Default to home if no section is active
+                const homeLink = document.querySelector('.nav-links a[href="#home"]');
+                if (homeLink) {
+                    homeLink.classList.add('active');
+                }
+            }
+        }
+
+        // Initialize active tab on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            updateActiveTab();
         });
 
         // Responsive carousel adjustment

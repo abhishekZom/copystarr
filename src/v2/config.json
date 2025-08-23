@@ -1,0 +1,367 @@
+[
+  {
+    "services": {
+      "header": {
+        "text": "Our Services",
+        "color": "#d4af37"
+      },
+      "cards": [
+        {
+          "salesPage": {
+            "icon": "fas fa-bullhorn",
+            "headerText": {
+              "text": "Sales Page Copy",
+              "color": "#d4af37"
+            },
+            "headerDesc": {
+              "text": "High-converting sales pages that turn visitors into customers with persuasive, benefit-driven copy.",
+              "color": "rgba(255, 255, 255, 0.9)"
+            }
+          }
+        },
+        {
+          "emailMarketing": {
+            "icon": "fas fa-envelope",
+            "headerText": {
+              "text": "Email Marketing",
+              "color": "#d4af37"
+            },
+            "headerDesc": {
+              "text": "Engaging email sequences that nurture leads and drive conversions through strategic storytelling.",
+              "color": "rgba(255, 255, 255, 0.9)"
+            }
+          }
+        },
+        {
+          "landingPages": {
+            "icon": "fas fa-rocket",
+            "headerText": {
+              "text": "Landing Pages",
+              "color": "#d4af37"
+            },
+            "headerDesc": {
+              "text": "Focused landing page copy that captures attention and drives specific actions with clear messaging.",
+              "color": "rgba(255, 255, 255, 0.9)"
+            }
+          }
+        },
+        {
+          "websiteCopy": {
+            "icon": "fas fa-globe",
+            "headerText": {
+              "text": "Website Copy",
+              "color": "#d4af37"
+            },
+            "headerDesc": {
+              "text": "Complete website copywriting that tells your brand story and guides visitors through their journey.",
+              "color": "rgba(255, 255, 255, 0.9)"
+            }
+          }
+        },
+        {
+          "socialMediaCopy": {
+            "icon": "fas fa-share-alt",
+            "headerText": {
+              "text": "Social Media Copy",
+              "color": "#d4af37"
+            },
+            "headerDesc": {
+              "text": "Engaging social media content that builds community and drives engagement across all platforms.",
+              "color": "rgba(255, 255, 255, 0.9)"
+            }
+          }
+        },
+        {
+          "adCopy": {
+            "icon": "fas fa-ad",
+            "headerText": {
+              "text": "Ad Copy",
+              "color": "#d4af37"
+            },
+            "headerDesc": {
+              "text": "Compelling ad copy for Google, Facebook, and other platforms that maximizes click-through rates.",
+              "color": "rgba(255, 255, 255, 0.9)"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "about": {
+      "header": {
+        "text": "Our Mission & Vision",
+        "color": "#d4af37"
+      },
+      "cards": [
+        {
+          "mission": {
+            "icon": "fas fa-bullseye",
+            "headerText": {
+              "text": "Our Mission",
+              "color": "#d4af37"
+            },
+            "headerDesc": {
+              "text": "To empower businesses with compelling copy that converts prospects into loyal customers, driving growth through strategic storytelling and persuasive messaging.",
+              "color": "rgba(255, 255, 255, 0.9)"
+            }
+          }
+        },
+        {
+          "vision": {
+            "icon": "fas fa-eye",
+            "headerText": {
+              "text": "Our Vision",
+              "color": "#d4af37"
+            },
+            "headerDesc": {
+              "text": "To bridge the gap between brands and their audiences through strategic, compelling copy that drives meaningful engagement and measurable results.",
+              "color": "rgba(255, 255, 255, 0.9)"
+            }
+          }
+        },
+        {
+          "whyCopyMatters": {
+            "icon": "fas fa-heart",
+            "headerText": {
+              "text": "Why Copy Matters",
+              "color": "#d4af37"
+            },
+            "headerDesc": {
+              "text": "In a world overwhelmed by content, the right words cut through the noise. Great copy builds trust, clarifies value, and motivates action—turning browsers into buyers and visitors into loyal customers.",
+              "color": "rgba(255, 255, 255, 0.9)"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "testimonials": {
+      "header": {
+        "text": "What Our Clients Say",
+        "color": "#d4af37"
+      },
+      "testimonials": [
+        {
+          "sarahJohnson": {
+            "name": "Sarah Johnson",
+            "role": "Marketing Director",
+            "company": "TechStart Inc.",
+            "testimonialText": {
+              "text": "Increased our conversion rate by 150%. Remarkable understanding of our audience.",
+              "color": "rgba(255, 255, 255, 0.95)"
+            },
+            "nameColor": "#d4af37",
+            "roleColor": "rgba(255, 255, 255, 0.8)",
+            "companyColor": "rgba(255, 255, 255, 0.6)"
+          }
+        },
+        {
+          "michaelChen": {
+            "name": "Michael Chen",
+            "role": "E-commerce Owner",
+            "company": "Fashion Forward",
+            "testimonialText": {
+              "text": "Generated $50K in additional revenue within the first month. Incredible results!",
+              "color": "rgba(255, 255, 255, 0.95)"
+            },
+            "nameColor": "#d4af37",
+            "roleColor": "rgba(255, 255, 255, 0.8)",
+            "companyColor": "rgba(255, 255, 255, 0.6)"
+          }
+        },
+        {
+          "emilyRodriguez": {
+            "name": "Emily Rodriguez",
+            "role": "Startup Founder",
+            "company": "GreenTech Solutions",
+            "testimonialText": {
+              "text": "Professional and results-driven. Perfect value proposition for investors.",
+              "color": "rgba(255, 255, 255, 0.95)"
+            },
+            "nameColor": "#d4af37",
+            "roleColor": "rgba(255, 255, 255, 0.8)",
+            "companyColor": "rgba(255, 255, 255, 0.6)"
+          }
+        },
+        {
+          "davidThompson": {
+            "name": "David Thompson",
+            "role": "CEO",
+            "company": "Digital Dynamics",
+            "testimonialText": {
+              "text": "Immediate ROI. Landing page conversions doubled within the first week.",
+              "color": "rgba(255, 255, 255, 0.95)"
+            },
+            "nameColor": "#d4af37",
+            "roleColor": "rgba(255, 255, 255, 0.8)",
+            "companyColor": "rgba(255, 255, 255, 0.6)"
+          }
+        },
+        {
+          "lisaPark": {
+            "name": "Lisa Park",
+            "role": "Marketing Manager",
+            "company": "InnovateTech",
+            "testimonialText": {
+              "text": "Outstanding work! Captured our brand voice perfectly.",
+              "color": "rgba(255, 255, 255, 0.95)"
+            },
+            "nameColor": "#d4af37",
+            "roleColor": "rgba(255, 255, 255, 0.8)",
+            "companyColor": "rgba(255, 255, 255, 0.6)"
+          }
+        },
+        {
+          "jamesWilson": {
+            "name": "James Wilson",
+            "role": "Founder",
+            "company": "EcoSolutions",
+            "testimonialText": {
+              "text": "Exceptional results. Email open rates increased by 200%.",
+              "color": "rgba(255, 255, 255, 0.95)"
+            },
+            "nameColor": "#d4af37",
+            "roleColor": "rgba(255, 255, 255, 0.8)",
+            "companyColor": "rgba(255, 255, 255, 0.6)"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "packages": {
+      "header": {
+        "text": "Choose Your Package",
+        "color": "#d4af37"
+      },
+      "packages": [
+        {
+          "starter": {
+            "name": "Starter",
+            "price": "$299",
+            "period": "/project",
+            "description": "Perfect for small businesses getting started",
+            "popular": false,
+            "nameColor": "#d4af37",
+            "priceColor": "white",
+            "periodColor": "rgba(255, 255, 255, 0.7)",
+            "descriptionColor": "rgba(255, 255, 255, 0.8)",
+            "features": [
+              {
+                "text": "Up to 500 words",
+                "color": "rgba(255, 255, 255, 0.9)"
+              },
+              {
+                "text": "1 revision included",
+                "color": "rgba(255, 255, 255, 0.9)"
+              },
+              {
+                "text": "48-hour delivery",
+                "color": "rgba(255, 255, 255, 0.9)"
+              },
+              {
+                "text": "Basic SEO optimization",
+                "color": "rgba(255, 255, 255, 0.9)"
+              },
+              {
+                "text": "Email support",
+                "color": "rgba(255, 255, 255, 0.9)"
+              }
+            ],
+            "buttonText": "Get Started",
+            "buttonLink": "#contact"
+          }
+        },
+        {
+          "professional": {
+            "name": "Professional",
+            "price": "$599",
+            "period": "/project",
+            "description": "Ideal for growing businesses",
+            "popular": true,
+            "popularBadgeText": "Most Popular",
+            "nameColor": "#d4af37",
+            "priceColor": "white",
+            "periodColor": "rgba(255, 255, 255, 0.7)",
+            "descriptionColor": "rgba(255, 255, 255, 0.8)",
+            "features": [
+              {
+                "text": "Up to 1,500 words",
+                "color": "rgba(255, 255, 255, 0.9)"
+              },
+              {
+                "text": "3 revisions included",
+                "color": "rgba(255, 255, 255, 0.9)"
+              },
+              {
+                "text": "24-hour delivery",
+                "color": "rgba(255, 255, 255, 0.9)"
+              },
+              {
+                "text": "Advanced SEO optimization",
+                "color": "rgba(255, 255, 255, 0.9)"
+              },
+              {
+                "text": "Priority email support",
+                "color": "rgba(255, 255, 255, 0.9)"
+              },
+              {
+                "text": "Social media snippets",
+                "color": "rgba(255, 255, 255, 0.9)"
+              }
+            ],
+            "buttonText": "Get Started",
+            "buttonLink": "#contact"
+          }
+        },
+        {
+          "enterprise": {
+            "name": "Enterprise",
+            "price": "$999",
+            "period": "/project",
+            "description": "For established businesses with complex needs",
+            "popular": false,
+            "nameColor": "#d4af37",
+            "priceColor": "white",
+            "periodColor": "rgba(255, 255, 255, 0.7)",
+            "descriptionColor": "rgba(255, 255, 255, 0.8)",
+            "features": [
+              {
+                "text": "Up to 3,000 words",
+                "color": "rgba(255, 255, 255, 0.9)"
+              },
+              {
+                "text": "Unlimited revisions",
+                "color": "rgba(255, 255, 255, 0.9)"
+              },
+              {
+                "text": "12-hour delivery",
+                "color": "rgba(255, 255, 255, 0.9)"
+              },
+              {
+                "text": "Premium SEO optimization",
+                "color": "rgba(255, 255, 255, 0.9)"
+              },
+              {
+                "text": "Phone & email support",
+                "color": "rgba(255, 255, 255, 0.9)"
+              },
+              {
+                "text": "Social media campaign",
+                "color": "rgba(255, 255, 255, 0.9)"
+              },
+              {
+                "text": "Brand voice guide",
+                "color": "rgba(255, 255, 255, 0.9)"
+              }
+            ],
+            "buttonText": "Get Started",
+            "buttonLink": "#contact"
+          }
+        }
+      ]
+    }
+  }
+]
