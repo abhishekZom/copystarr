@@ -33,7 +33,7 @@ const Contact = () => {
               </InfoIcon>
               <InfoDetails>
                 <h3>Email Us</h3>
-                <p>hello@copystarr.com</p>
+                <p>aon@copystarr.com</p>
                 <span>We respond within 24 hours</span>
               </InfoDetails>
             </InfoCard>
@@ -43,8 +43,8 @@ const Contact = () => {
                 <i className="fas fa-phone"></i>
               </InfoIcon>
               <InfoDetails>
-                <h3>Call Us</h3>
-                <p>+1 (555) 123-4567</p>
+                <h3>Support</h3>
+                <p>support@copystarr.com</p>
                 <span>Mon-Fri, 9AM-6PM EST</span>
               </InfoDetails>
             </InfoCard>

@@ -145,11 +145,11 @@
       "testimonials": [
         {
           "sarahJohnson": {
-            "name": "Sarah Johnson",
-            "role": "Marketing Director",
-            "company": "TechStart Inc.",
+            "name": "E. Lavaque",
+            "role": "Owner",
+            "company": "The Casanova Advantage",
             "testimonialText": {
-              "text": "Increased our conversion rate by 150%. Remarkable understanding of our audience.",
+              "text": "The twitter conversion DM templates and cold emails help so much to raise initial capital to turn my offer into a sustainable income source. Will hire again!",
               "color": "rgba(255, 255, 255, 0.95)"
             },
             "nameColor": "#d4af37",
@@ -159,11 +159,11 @@
         },
         {
           "michaelChen": {
-            "name": "Michael Chen",
-            "role": "E-commerce Owner",
-            "company": "Fashion Forward",
+            "name": "Kai",
+            "role": "Owner",
+            "company": "ProByOcean",
             "testimonialText": {
-              "text": "Generated $50K in additional revenue within the first month. Incredible results!",
+              "text": "Not a fan of short form but Aon got me the results. Definitely recommend him specially for his persistent and genuinecare about my brand.",
               "color": "rgba(255, 255, 255, 0.95)"
             },
             "nameColor": "#d4af37",
@@ -177,7 +177,7 @@
             "role": "Director",
             "company": "Tohima Filter",
             "testimonialText": {
-              "text": "Thanks for the custom templates for outreach. After a 40min long call, we are expanding. This has been such a ride. Great work!",
+              "text": "Thanks for the custom templates for outreach you prepared. After a 40min long call today, we are expanding!   This has been such a ride. Good work Aon!",
               "color": "rgba(255, 255, 255, 0.95)"
             },
             "nameColor": "#d4af37",
@@ -187,25 +187,11 @@
         },
         {
           "lisaPark": {
-            "name": "Lisa Park",
-            "role": "Marketing Manager",
-            "company": "InnovateTech",
+            "name": "John See",
+            "role": "Owner",
+            "company": "The Sentient Coder",
             "testimonialText": {
-              "text": "Outstanding work! Captured our brand voice perfectly.",
-              "color": "rgba(255, 255, 255, 0.95)"
-            },
-            "nameColor": "#d4af37",
-            "roleColor": "rgba(255, 255, 255, 0.8)",
-            "companyColor": "rgba(255, 255, 255, 0.6)"
-          }
-        },
-        {
-          "jamesWilson": {
-            "name": "James Wilson",
-            "role": "Founder",
-            "company": "EcoSolutions",
-            "testimonialText": {
-              "text": "Exceptional results. Email open rates increased by 200%.",
+              "text": "The split testing wizardry on FB ads was awesome. Hit 0.14$ per link click and 3.8% conversion rate (visitor). Not bad at all!",
               "color": "rgba(255, 255, 255, 0.95)"
             },
             "nameColor": "#d4af37",
