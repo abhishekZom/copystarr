@@ -51,14 +51,27 @@ const Header = () => {
     <HeaderWrapper>
       <Nav>
         <Logo href="#home">Copystarr</Logo>
-        <NavLinks className={isMenuOpen ? 'active' : ''}>
-          <li><NavLink href="#home" className={activeSection === 'home' ? 'active' : ''} onClick={closeMenu}>Home</NavLink></li>
-          <li><NavLink href="#about" className={activeSection === 'about' ? 'active' : ''} onClick={closeMenu}>About</NavLink></li>
-          <li><NavLink href="#services" className={activeSection === 'services' ? 'active' : ''} onClick={closeMenu}>Services</NavLink></li>
-          <li><NavLink href="#packages" className={activeSection === 'packages' ? 'active' : ''} onClick={closeMenu}>Packages</NavLink></li>
-          <li><NavLink href="#testimonials" className={activeSection === 'testimonials' ? 'active' : ''} onClick={closeMenu}>Testimonials</NavLink></li>
-          <li><NavLink href="#contact" className={activeSection === 'contact' ? 'active' : ''} onClick={closeMenu}>Contact</NavLink></li>
-        </NavLinks>
+        <NavCenter>
+          <NavLinks className={isMenuOpen ? 'active' : ''}>
+            <li><NavLink href="#home" className={activeSection === 'home' ? 'active' : ''} onClick={closeMenu}>Home</NavLink></li>
+            <li><NavLink href="#about" className={activeSection === 'about' ? 'active' : ''} onClick={closeMenu}>About</NavLink></li>
+            <li><NavLink href="#services" className={activeSection === 'services' ? 'active' : ''} onClick={closeMenu}>Services</NavLink></li>
+            <li><NavLink href="#packages" className={activeSection === 'packages' ? 'active' : ''} onClick={closeMenu}>Packages</NavLink></li>
+            <li><NavLink href="#testimonials" className={activeSection === 'testimonials' ? 'active' : ''} onClick={closeMenu}>Testimonials</NavLink></li>
+            <li><NavLink href="#contact" className={activeSection === 'contact' ? 'active' : ''} onClick={closeMenu}>Contact</NavLink></li>
+          </NavLinks>
+          <HeaderSocials>
+            <SocialLink href="https://www.linkedin.com/in/aon-starr-a02775335/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i className="fab fa-linkedin"></i>
+            </SocialLink>
+            <SocialLink href="https://x.com/copystarr" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X">
+              <i className="fab fa-twitter"></i>
+            </SocialLink>
+            <SocialLink href="https://www.instagram.com/copy_starr/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i className="fab fa-instagram"></i>
+            </SocialLink>
+          </HeaderSocials>
+        </NavCenter>
         <MenuToggle onClick={toggleMenu}>
           <span></span>
           <span></span>
@@ -91,6 +104,16 @@ const Nav = styled.nav`
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+`;
+
+const NavCenter = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  
+  @media (max-width: 768px) {
+    gap: 0;
+  }
 `;
 
 const Logo = styled.a`
@@ -171,6 +194,30 @@ const NavLink = styled.a`
     &.active::after {
       bottom: -5px;
     }
+  }
+`;
+
+const HeaderSocials = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const SocialLink = styled.a`
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+  border-radius: 50%;
+  
+  &:hover {
+    color: #d4af37;
+    background: rgba(212, 175, 55, 0.1);
+    transform: translateY(-2px);
   }
 `;
 

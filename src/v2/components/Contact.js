@@ -91,17 +91,14 @@ const Contact = () => {
             <SocialLinks>
               <h3>Follow Us</h3>
               <SocialIcons>
-                <SocialLink href="#" aria-label="LinkedIn">
+                <SocialLink href="https://www.linkedin.com/in/aon-starr-a02775335/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                   <i className="fab fa-linkedin"></i>
                 </SocialLink>
-                <SocialLink href="#" aria-label="Twitter">
+                <SocialLink href="https://x.com/copystarr" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X">
                   <i className="fab fa-twitter"></i>
                 </SocialLink>
-                <SocialLink href="#" aria-label="Instagram">
+                <SocialLink href="https://www.instagram.com/copy_starr/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                   <i className="fab fa-instagram"></i>
-                </SocialLink>
-                <SocialLink href="#" aria-label="Facebook">
-                  <i className="fab fa-facebook"></i>
                 </SocialLink>
               </SocialIcons>
             </SocialLinks>
