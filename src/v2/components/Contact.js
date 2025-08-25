@@ -21,10 +21,10 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // EmailJS configuration - you'll need to replace these with your actual values
-    const serviceId = 'YOUR_SERVICE_ID'; // Replace with your service ID
-    const templateId = 'YOUR_TEMPLATE_ID'; // Replace with your template ID  
-    const publicKey = 'YOUR_PUBLIC_KEY'; // Replace with your public key
+    // EmailJS configuration
+    const serviceId = 'service_6rhsvl8';
+    const templateId = 'template_mrsoiqo';  
+    const publicKey = '-2fmMOZNnkAaHy8x2';
 
     // Create template parameters
     const templateParams = {
